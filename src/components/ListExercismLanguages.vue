@@ -1,31 +1,18 @@
 <template>
-  <ApolloQuery
-    class="row"
-    :query="require('../graphql/ExercismLanguages.gql')"
-    :update="getEntries">
-    <template v-slot="{ result: { loading, error, data } }">
-
-      <!-- Loading -->
-      <div v-if="loading">Loading...</div>
-
-      <!-- Error -->
-      <div v-else-if="error">An error occured</div>
-
-      <!-- Data -->
-      <b-button-group
-        v-else-if="data">
-        <b-button
-          variant="outline-light"
-          v-for="lang in data"
-          :key="lang"
-          :to="`/Exercism/${lang}`"
-          :pressed="lang === language">{{ lang }}</b-button>
-      </b-button-group>
-    </template>
-  </ApolloQuery>
+  <!-- Data -->
+  <b-button-group
+    v-if="data">
+    <b-button
+      variant="outline-light"
+      v-for="lang in data"
+      :key="lang"
+      :to="`/Exercism/${lang}`"
+      :pressed="lang === language">{{ lang }}</b-button>
+  </b-button-group>
 </template>
 
 <script>
+import repo from '../gateway/GitHubRepoAPI'
 export default {
   name: 'ListExercismLanguages',
   props: {
@@ -34,13 +21,35 @@ export default {
       default: 'javascript'
     }
   },
-  methods: {
-    getEntries(data) {
-      return data.repository.languages.entries
-        .filter(entry => entry.type === "tree")
-        .map(entry => entry.name)
-        .map(lang => lang[0].toUpperCase() + lang.slice(1))
+  data() {
+    return {
+      data: null
     }
+  },
+  computed: {
+    lang() {
+      return this.language.toLowerCase()
+    }
+  },
+  methods: {
+    getLanguages() {
+      repo('hello-world')
+        .get('Exercism')
+        .then(resp => {
+          this.data = resp.data
+            .filter(entry => entry.type === 'dir')
+            .map(entry => entry.name)
+        })
+        .catch(() => {})
+    }
+  },
+  watch: {
+    lang() {
+      this.getLanguages()
+    }
+  },
+  mounted() {
+    this.getLanguages()
   }
 }
 </script>
