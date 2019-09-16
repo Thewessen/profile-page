@@ -18,7 +18,7 @@ new Vue({
     httpLinkOptions: {
       uri: 'https://api.github.com/graphql',
       headers: {
-        authorization: 'bearer ' + process.env.AUTH_TOKEN,
+        authorization: 'bearer ' + process.env.VUE_APP_AUTH_TOKEN,
       }
     },
     cache: new InMemoryCache(),
