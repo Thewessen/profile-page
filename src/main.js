@@ -9,6 +9,7 @@ Vue.config.productionTip = false
 // Some aditions
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import VueCodeHightlight from 'vue-code-highlight'
+import store from './store'
 
 Vue.use(VueCodeHightlight)
 Vue.use(BoostrapVue)
@@ -24,6 +25,8 @@ new Vue({
     cache: new InMemoryCache(),
     connectToDevTools: true
   }),
+
   router,
+  store,
   render: h => h(App)
 }).$mount('#app')
