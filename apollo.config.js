@@ -9,7 +9,14 @@ const env = loadEnv([
 
 module.exports = {
   client: {
-    service: env.VUE_APP_APOLLO_ENGINE_SERVICE,
+    service: {
+      name: 'github',
+      url: 'https://api.github.com/graphql',
+      headers: {
+        authorization: 'Bearer ' + process.env.AUTH_TOKEN,
+      }
+    },
+    skipSSLValidation: true,
     includes: ['src/**/*.{js,jsx,ts,tsx,vue,gql}']
   },
   service: {
