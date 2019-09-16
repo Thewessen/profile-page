@@ -1,0 +1,12 @@
+query Languages {
+  repository(owner: "Thewessen", name: "hello-world") {
+    languages: object(expression: "master:Exercism") {
+      ... on Tree {
+        entries {
+          name
+          type
+        }
+      }
+    }
+  }
+}

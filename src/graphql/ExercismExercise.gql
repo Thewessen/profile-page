@@ -1,0 +1,14 @@
+query Explenation($explenation: String, $solution: String) {
+  repository(owner: "Thewessen", name: "hello-world") {
+    explenation: object(expression: $explenation) {
+      ... on Blob {
+        text
+      }
+    }
+    solution: object(expression: $solution) {
+      ... on Blob {
+        text
+      }
+    }
+  }
+}

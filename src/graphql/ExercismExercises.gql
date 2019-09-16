@@ -1,0 +1,12 @@
+query Exercises ($exercises: String) {
+  repository(owner: "Thewessen", name: "hello-world") {
+    exercises: object(expression: $exercises) {
+      ... on Tree {
+        entries {
+          name
+          type
+        }
+      }
+    }
+  }
+}
