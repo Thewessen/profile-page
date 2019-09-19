@@ -13,7 +13,7 @@ module.exports = {
       name: 'github',
       url: 'https://api.github.com/graphql',
       headers: {
-        authorization: 'Bearer ' + process.env.AUTH_TOKEN,
+        authorization: 'Bearer 653709ee16caceac2016a417a3cfb83c928a0878',
       }
     },
     skipSSLValidation: true,
