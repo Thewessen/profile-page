@@ -19,7 +19,7 @@
           class="ml-auto text-secondary"
           target="_blank"
           rel="noopener noreferrer"
-          :href="`https://github.com/Thewessen/tree/master/Exercism/${lang}/${exerciseFile}`">
+          :href="`https://github.com/Thewessen/hello-world/blob/master/Exercism/${lang}/${exercise}`">
           view on GitHub
         </b-link>
       </b-row>
