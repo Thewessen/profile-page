@@ -52,7 +52,11 @@ export default {
         'javascript': 'js',
         'typescript': 'ts'
       }
-      return `${this.exercise}.${ext[this.lang]}`
+      let exercise = this.exercise
+      if (this.lang === 'python') {
+        exercise = exercise.replace('-', '_')
+      }
+      return `${exercise}.${ext[this.lang]}`
     },
     lang() {
       return this.language.toLowerCase()
