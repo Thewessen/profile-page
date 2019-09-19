@@ -1,8 +1,15 @@
-query CTFBandit {
+query {
   repository(owner: "Thewessen", name: "CTF") {
-    object(expression: "master:OverTheWire/bandit/level02") {
-      ... on Blob {
-        text
+    object(expression: "master:OverTheWire/bandit") {
+      ... on Tree {
+        entries {
+          name
+          object {
+            ... on Blob {
+              text
+            }
+          }
+        }
       }
     }
   }

@@ -1,0 +1,12 @@
+query {
+  repository(owner: "Thewessen", name: "CTF") {
+    wargame: object(expression: "master:OverTheWire") {
+      ... on Tree {
+        entries {
+          type
+          name
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+query {
+  repository(owner: "Thewessen", name: "CTF") {
+    object(expression: "master:OverTheWire/krypton") {
+      ... on Tree {
+        entries {
+          name
+          level: object {
+            ...Text
+          }
+        }
+      }
+    }
+  }
+}
+
+fragment Text on Tree {
+  entries {
+    solution: object {
+      id
+      ... on Blob {
+        text
+      }
+    }
+  }
+}
