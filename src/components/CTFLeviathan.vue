@@ -1,6 +1,6 @@
 <template>
   <ApolloQuery
-    :query="require('../graphql/CTFbandit.gql')"
+    :query="require('../graphql/CTFLeviathan.gql')"
     :update="computedData">
   <template v-slot="{ result: { loading, error, data } }">
 
@@ -12,38 +12,27 @@
 
     <!-- Data -->
     <div v-else-if="data">
-      <h1>Bandit</h1>
+      <h1>Leviathan</h1>
       <p>
-        The Bandit wargame is aimed at absolute beginners. It will teach the basics
-        needed to be able to play other wargames. Although the wargame starts
-        pretty simple, in the end it reaches serieus difficulty (for me
-        atleast). I really like this wargame, because it covers much ground
-        using the shell, and ends with using Git.
+        Leviathan is a wargame that has been rescued from the demise of
+        intruded.net, previously hosted on leviathan.intruded.net. It is on
+        the same difficulty level as OverTheWire bandit.
       </p>
       <b-row class="justify-content-end">
         <b-link
           class="m-2 text-secondary"
           target="_blank"
           rel="noopener noreferrer"
-          href="https://github.com/Thewessen/CTF/blob/master/OverTheWire/bandit">
+          href="https://github.com/Thewessen/CTF/blob/master/OverTheWire/leviathan">
           view on GitHub
         </b-link>
         <b-link
           class="m-2 text-secondary"
           target="_blank"
           rel="noopener noreferrer"
-          href="https://overthewire.org/wargames/bandit">
+          href="https://overthewire.org/wargames/leviathan">
           view on OverTheWire
         </b-link>
-      </b-row>
-      <b-row>
-        <h2 class="m-4">Login</h2>
-      </b-row>
-      <b-row>
-        <p>
-          For completing these CTF exercises I've created a simple login script utilizing sshpass.
-          <code-highlight :lineNumbers="false">{{ loginScript }}</code-highlight>
-        </p>
       </b-row>
       <b-row
         v-for="level in data"
@@ -60,23 +49,13 @@
 <script>
 import CodeHighlight from '../components/CodeHighlight'
 export default {
-  name: "CTFBandit",
-  data() {
-    return {
-      loginScript: null
-    }
-  },
+  name: "CTFLeviathan",
   components: {
     CodeHighlight,
   },
   methods: {
     computedData (data) {
-      const entries = data.repository.object.entries
-      this.loginScript = entries
-        .filter(entry => entry.name.startsWith('login'))
-        .map(entry => entry.object.text)[0]
-      return entries
-        .filter(entry => (/^level\d\d$/).test(entry.name))
+      return data.repository.object.entries
         .map(entry => ({
           name: entry.name,
           text: entry.object.text

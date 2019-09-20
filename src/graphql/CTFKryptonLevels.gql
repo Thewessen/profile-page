@@ -1,0 +1,11 @@
+query Krypton {
+  repository(owner: "Thewessen", name: "CTF") {
+    levels: object(expression: "master:OverTheWire/krypton") {
+      ... on Tree {
+        entries {
+          name
+        }
+      }
+    }
+  }
+}

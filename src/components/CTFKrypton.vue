@@ -1,6 +1,6 @@
 <template>
   <ApolloQuery
-    :query="require('../graphql/CTFkrypton.gql')"
+    :query="require('../graphql/CTFKryptonLevels.gql')"
     :update="computedData">
   <template v-slot="{ result: { loading, error, data } }">
 
@@ -17,11 +17,27 @@
         The krypton wargame focusses on cryptography. Different (ancient)
         methods of encryption and decryption are being exercised.
       </p>
+      <b-row class="justify-content-end">
+        <b-link
+          class="m-2 text-secondary"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/Thewessen/CTF/blob/master/OverTheWire/krypton">
+          view on GitHub
+        </b-link>
+        <b-link
+          class="m-2 text-secondary"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://overthewire.org/wargames/krypton">
+          view on OverTheWire
+        </b-link>
+      </b-row>
       <b-row
         v-for="level in data"
-        :key="level.name">
-        <h2 class="m-4">{{ level.name }}</h2>
-        <code-highlight :lineNumbers="false">{{ level.text }}</code-highlight>
+        :key="level">
+        <h2 class="m-4 col-12">{{ level }}</h2>
+        <CTFKryptonSolution :level="level" />
       </b-row>
     </div>
   </template>
@@ -30,22 +46,17 @@
 </template>
 
 <script>
-import CodeHighlight from '../components/CodeHighlight'
+import CTFKryptonSolution from '../components/CTFKryptonSolution'
 export default {
   name: "CTFKrypton",
   components: {
-    CodeHighlight
+    CTFKryptonSolution
   },
   methods: {
     computedData (data) {
-      console.log(data)
-      return data.repository.level.entries
-        .map(entry => ({
-          name: entry.name,
-          text: entry.level.entries
-            .find(entry => entry.name.startsWith('solution'))
-            .text
-        }))
+      return data.repository.levels.entries
+        .filter(entry => !entry.name.startsWith('login'))
+        .map(entry => entry.name)
     }
   }
 }

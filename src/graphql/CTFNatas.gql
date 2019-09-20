@@ -1,0 +1,11 @@
+query Natas {
+  repository(owner: "Thewessen", name: "CTF") {
+    files: object(expression: "master:OverTheWire/natas") {
+      ... on Tree {
+        entries {
+          name
+        }
+      }
+    }
+  }
+}

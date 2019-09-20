@@ -10,6 +10,8 @@
     </b-navbar>
     <CTFBandit v-if="wargame === 'bandit'" />
     <CTFKrypton v-if="wargame === 'krypton'" />
+    <CTFLeviathan v-if="wargame === 'leviathan'" />
+    <CTFNatas v-if="wargame === 'natas'" />
   </div>
 </template>
 
@@ -17,12 +19,16 @@
 import ListWargames from '../components/ListWargames'
 import CTFBandit from '../components/CTFBandit'
 import CTFKrypton from '../components/CTFKrypton'
+import CTFLeviathan from '../components/CTFLeviathan'
+import CTFNatas from '../components/CTFNatas'
 export default {
   name: "OverTheWire",
   components: {
     ListWargames,
     CTFBandit,
     CTFKrypton,
+    CTFLeviathan,
+    CTFNatas,
   },
   props: {
     wargame: {
