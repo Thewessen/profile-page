@@ -63,8 +63,10 @@ export default {
           if (!entry.name.endsWith('html')) {
             return acc
           }
+          const lvl = entry.replace(/\D/g, '')
+          const pyRegExp = new RegExp('\\D+' + lvl + '.py')
           const pyFile = entries
-            .find(e => e.name.endsWith(entry.name.replace(/\D/g, '') + '.py'))
+            .find(e => pyRegExp.test(e.name))
           return [...acc, {
             name: entry.name.replace('.html', ''),
             html: entry.name,
