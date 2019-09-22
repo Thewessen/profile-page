@@ -122,6 +122,7 @@ export default {
   overflow: auto;
   tab-size: 1.5em;
   -moz-tab-size: 1.5em;
+  margin-bottom: 1rem;
 }
 .code-highlight__line-numbers {
   height: 100%;

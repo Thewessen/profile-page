@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import ExercismExercise from './views/ExercismExercise'
 import Exercism from './views/Exercism'
 import OverTheWire from './views/OverTheWire'
+import ExercismRobotName from '@/views/ExercismRobotName'
 
 Vue.use(Router)
 
@@ -33,6 +34,11 @@ export default new Router({
       props: true,
     },
     {
+      path: '/Exercism/RobotName',
+      name: 'RobotName',
+      component: ExercismRobotName
+    },
+    {
       path: '/Exercism/:language/:exercise',
       name: 'Exercism-exercise',
       component: ExercismExercise,
@@ -43,6 +49,6 @@ export default new Router({
       name: 'Exercism',
       component: Exercism,
       props: true
-    }
+    },
   ]
 })

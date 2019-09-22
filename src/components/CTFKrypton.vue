@@ -46,7 +46,7 @@
 </template>
 
 <script>
-import CTFKryptonSolution from '../components/CTFKryptonSolution'
+import CTFKryptonSolution from '@/components/CTFKryptonSolution'
 export default {
   name: "CTFKrypton",
   components: {

@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import CTFNatasSolution from './CTFNatasSolution'
+import CTFNatasSolution from '@/components/CTFNatasSolution'
 export default {
   name: "CTFNatas",
   components: {

@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import CodeHighlight from '../components/CodeHighlight'
+import CodeHighlight from '@/components/CodeHighlight'
 import VueMarkdown from 'vue-markdown'
 export default {
   name: "ExercismExercise",

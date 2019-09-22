@@ -16,11 +16,11 @@
 </template>
 
 <script>
-import ListWargames from '../components/ListWargames'
-import CTFBandit from '../components/CTFBandit'
-import CTFKrypton from '../components/CTFKrypton'
-import CTFLeviathan from '../components/CTFLeviathan'
-import CTFNatas from '../components/CTFNatas'
+import ListWargames from '@/components/ListWargames'
+import CTFBandit from '@/components/CTFBandit'
+import CTFKrypton from '@/components/CTFKrypton'
+import CTFLeviathan from '@/components/CTFLeviathan'
+import CTFNatas from '@/components/CTFNatas'
 export default {
   name: "OverTheWire",
   components: {

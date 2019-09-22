@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import CodeHighlight from '../components/CodeHighlight'
+import CodeHighlight from '@/components/CodeHighlight'
 export default {
   name: "CTFNatas",
   components: {
@@ -48,12 +48,10 @@ export default {
   methods: {
     computedData (data) {
       const pyFile = data.repository.python
-      const d = {
+      return {
         html: data.repository.html.text,
         python: pyFile ? pyFile.text : null
       }
-      console.log(d)
-      return d
     }
   }
 }

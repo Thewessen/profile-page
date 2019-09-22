@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import ListExercismExercises from '../components/ListExercismExercises'
-import ListExercismLanguages from '../components/ListExercismLanguages'
+import ListExercismExercises from '@/components/ListExercismExercises'
+import ListExercismLanguages from '@/components/ListExercismLanguages'
 export default {
   name: "Exercism",
   components: {

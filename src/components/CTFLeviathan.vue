@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import CodeHighlight from '../components/CodeHighlight'
+import CodeHighlight from '@/components/CodeHighlight'
 export default {
   name: "CTFLeviathan",
   components: {
