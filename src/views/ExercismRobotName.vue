@@ -13,10 +13,9 @@
     <h1>Robot Name</h1>
     <h3>The exercise</h3>
     <vue-markdown v-if="explenation">{{ explenation }}</vue-markdown>
-    <h3>First atempt</h3>
+    <h3>First attempt</h3>
     <CodeHighlight
       v-if="firstAttempt"
-      v-bind="firstAttempt"
       :startLineNumbers="38">{{ getLines(38, 57, 'firstAttempt') }}</CodeHighlight>
     <p>
       This is only the important part of the code. As you can see, it keeps
@@ -27,9 +26,10 @@
     <p>
       The <code>chars</code> and <code>numbers</code> functions are generators,
       yielding the chars or numbers in order. We need them all for the
-      randomName function to work, so we convert them to an array using the ES6
-      spread operator. The <code>randomName</code> function random picks a char
-      from each of them and joins the result, presenting a Robot name.
+      <code>randomName</code> function to work, so we convert them to an array
+      using the ES6 spread operator. The <code>randomName</code> function
+      random picks a char from each of them and joins the result, presenting a
+      Robot name.
     </p>
     <h3>The bonus</h3>
     <p>
@@ -90,7 +90,6 @@
     </p>
     <CodeHighlight
       v-if="solution"
-      v-bind="solution"
       :startLineNumbers="67">{{ getLines(66, 74) }}</CodeHighlight>
     <p>
       All that rests us is reducing this template into one big generator, using
@@ -103,7 +102,6 @@
     </p>
     <CodeHighlight
       v-if="solution"
-      v-bind="solution"
       :startLineNumbers="36">{{ getLines(36, 39) }}</CodeHighlight>
     <p>
       Notice how we immediatly invoce the returned generator. We want
@@ -119,7 +117,6 @@
     </p>
     <CodeHighlight
       v-if="solution"
-      v-bind="solution"
       :startLineNumbers="14">{{ getLines(14, 20) }}</CodeHighlight>
     <p>
       One of the problems I faced was depleting an iterable too early. Hence
@@ -133,7 +130,6 @@
     </p>
     <CodeHighlight
       v-if="solution"
-      v-bind="solution"
       :startLineNumbers="11">{{ getLines(11, 14) }}</CodeHighlight>
     <p>
       A simple random integer function. The <code>Math.random()</code> method
@@ -142,7 +138,6 @@
     </p>
     <CodeHighlight
       v-if="solution"
-      v-bind="solution"
       :startLineNumbers="2">{{ getLines(2, 11) }}</CodeHighlight>
     <p>
       A lot of code for something very simple: creating an array of characters.
@@ -170,8 +165,7 @@
     </p>
     <h3>Complete code</h3>
     <CodeHighlight
-      v-if="solution"
-      v-bind="solution">{{ solution }}</CodeHighlight>
+      v-if="solution">{{ solution }}</CodeHighlight>
   </div>
 </template>
 
