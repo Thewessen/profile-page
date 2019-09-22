@@ -1,0 +1,9 @@
+query Krypton($level: String!) {
+  repository(owner: "Thewessen", name: "CTF") {
+    object(expression: $level) {
+      ... on Blob {
+        text
+      }
+    }
+  }
+}

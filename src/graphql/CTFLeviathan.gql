@@ -1,6 +1,6 @@
 query {
   repository(owner: "Thewessen", name: "CTF") {
-    object(expression: "master:OverTheWire/bandit") {
+    object(expression: "master:OverTheWire/leviathan") {
       ... on Tree {
         entries {
           name

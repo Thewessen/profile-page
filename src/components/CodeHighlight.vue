@@ -17,7 +17,7 @@
       v-for="line in lineNumbersCount"
       :key="line"
     >
-      {{ line }}
+      {{ Number(line) + Number(startLineNumbers) }}
     </div>
   </div>
   <pre
@@ -35,6 +35,10 @@ export default {
     lineNumbers: {
       type: Boolean,
       default: true
+    },
+    startLineNumbers: {
+      type: Number,
+      default: 0
     },
     language: {
       type: String,
@@ -118,6 +122,7 @@ export default {
   overflow: auto;
   tab-size: 1.5em;
   -moz-tab-size: 1.5em;
+  margin-bottom: 1rem;
 }
 .code-highlight__line-numbers {
   height: 100%;

@@ -19,7 +19,7 @@
           class="ml-auto text-secondary"
           target="_blank"
           rel="noopener noreferrer"
-          :href="`https://github.com/Thewessen/tree/master/Exercism/${lang}/${exerciseFile}`">
+          :href="`https://github.com/Thewessen/hello-world/blob/master/Exercism/${lang}/${exercise}`">
           view on GitHub
         </b-link>
       </b-row>
@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import CodeHighlight from '../components/CodeHighlight'
+import CodeHighlight from '@/components/CodeHighlight'
 import VueMarkdown from 'vue-markdown'
 export default {
   name: "ExercismExercise",
@@ -52,7 +52,11 @@ export default {
         'javascript': 'js',
         'typescript': 'ts'
       }
-      return `${this.exercise}.${ext[this.lang]}`
+      let exercise = this.exercise
+      if (this.lang === 'python') {
+        exercise = exercise.replace('-', '_')
+      }
+      return `${exercise}.${ext[this.lang]}`
     },
     lang() {
       return this.language.toLowerCase()

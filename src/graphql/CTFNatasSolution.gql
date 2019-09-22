@@ -1,0 +1,14 @@
+query Natas($html: String!, $python: String) {
+  repository(owner: "Thewessen", name: "CTF") {
+    html: object(expression: $html) {
+      ... on Blob {
+        text
+      }
+    }
+    python: object(expression: $python) {
+      ... on Blob {
+        text
+      }
+    }
+  }
+}
