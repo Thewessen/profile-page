@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
-import ExercismExercise from './views/ExercismExercise'
-import Exercism from './views/Exercism'
-import OverTheWire from './views/OverTheWire'
+import Home from '@/views/Home.vue'
+import ShowcaseProjects from '@/views/ShowcaseProjects'
+import ExercismExercise from '@/views/ExercismExercise'
+import Exercism from '@/views/Exercism'
+import OverTheWire from '@/views/OverTheWire'
 import ExercismRobotName from '@/views/ExercismRobotName'
 
 Vue.use(Router)
@@ -12,7 +13,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/home'
+      redirect: '/projects'
     },
     {
       path: '/home',
@@ -26,6 +27,11 @@ export default new Router({
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+    },
+    {
+      path: '/projects',
+      name: 'projects',
+      component: ShowcaseProjects
     },
     {
       path: '/CTF/OverTheWire/:wargame',

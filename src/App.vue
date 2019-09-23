@@ -1,17 +1,16 @@
 <template>
   <main id="app">
-    <ul>
-      <li><router-link to="#">Home</router-link></li>
-      <li><router-link to="/CTF/OverTheWire/bandit">OverTheWire</router-link></li>
-      <li><router-link to="/Exercism/javascript">Exercism</router-link></li>
-    </ul>
+    <MainHeader />
     <router-view />
   </main>
 </template>
 
 <script>
+import MainHeader from '@/components/MainHeader'
 export default {
-  
+  components: {
+    MainHeader
+  }
 }
 </script>
 

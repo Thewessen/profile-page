@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <article>
     <h1>Chronos</h1>
     <p>
       These are some of my projects I worked on since I fell in love with
@@ -100,7 +100,7 @@
     <ProjectBlockLayout
       title="Exercism.io"
       subtitle="May 2019"
-      url=""
+      url="/Exercism/Javascript"
       :languages="['EcmaScript 6', 'Python', 'TypeScript']">
       While learning from a book called <em>Exploring ES6</em>, I also started
       some exercises on Exercism.io. This website contains exercises and tests
@@ -165,13 +165,13 @@
       here. This pages is made using the VueJS-framework. Which created another
       oppertunity for me learning a new webframework.
     </ProjectBlockLayout>
-  </div>
+  </article>
 </template>
 
 <script>
 import ProjectBlockLayout from '@/components/ProjectBlockLayout'
 export default {
-  name: 'home',
+  name: 'ShowcaseProjects',
   components: {
     ProjectBlockLayout,
   }
@@ -179,12 +179,6 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.container
-  max-width: $small
-  margin: 0 auto
-  > *
-    padding-left: 1rem
-    margin-bottom: 1rem
 h1
   padding-left: 1rem
 p
