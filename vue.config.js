@@ -3,7 +3,10 @@ module.exports = {
   css: {
     loaderOptions: {
       sass: {
-        prependData: `@import "~@/variables.sass"`
+        prependData: [
+          `@import "@/sass/variables.sass"`,
+          `@import "@/sass/mixins.sass"`
+        ].join('\n')
       }
     }
   }

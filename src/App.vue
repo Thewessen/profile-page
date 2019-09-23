@@ -17,7 +17,7 @@ export default {
 
 <style lang="sass">
 @import '../node_modules/vue-code-highlight/themes/prism-tomorrow.css'
-@import './main.sass'
+@import '@/sass/main.sass'
 
 ul
   list-style-type: none
@@ -28,11 +28,6 @@ ul
 
 #app
   margin: 0
-  font-family: 'Avenir', Helvetica, Arial, sans-serif
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
-  text-align: left
-  color: #2c3e50
 
 a
   color: black

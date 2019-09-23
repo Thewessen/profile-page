@@ -65,7 +65,6 @@ export default {
 <style lang="sass" scoped>
 .project-layout-container
   width: 100%
-  padding: 1rem
   display: flex
   flex-flow: row wrap
   margin: 0
@@ -73,7 +72,6 @@ export default {
     margin: 0
     padding: 0
   > div
-    width: 70%
     > header
       margin: 0
       margin-bottom: 1em
@@ -82,21 +80,21 @@ export default {
       max-width: 32rem
       margin-bottom: 1rem
   > ul
-    width: 30%
-
-ul
-  list-style-type: none
-  > li
-    display: flex
-    flex-flow: row nowrap
-    align-items: center
-    margin: 0
-    margin-bottom: 1rem
-    > img
-      max-width: 2rem
-    > div
-      padding-left: .5rem
-
+    list-style-type: none
+    > li
+      display: flex
+      flex-flow: row nowrap
+      align-items: center
+      margin: 0
+      margin-bottom: 1rem
+      > img
+        max-width: 2rem
+      > div
+        padding-left: .5rem
+    width: 100%
+    @include respond-to("small")
+      width: unset
+      margin-left: 2rem
 
 .icon 
   max-width: 2rem

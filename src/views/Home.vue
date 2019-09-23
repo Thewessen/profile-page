@@ -14,8 +14,8 @@
       :languages="['C++']">
       In my years of studying Mathematics at the Radboud University of
       Nijmegen, I followed a side course called Programming. The course used
-      C++ as a language to teach multiple different aspects of programming:
-      call by value/ref, sorting algorithms, pattern matching, recursion...
+      C++ as a language to teach different aspects of programming:
+      call by value/ref, sorting algorithms, pattern matching, recursion, etc.
       Staring Karel the robot, who needed some A.I. for finding it's way
       through a maze.
     </ProjectBlockLayout>
@@ -72,7 +72,7 @@
       title="Capture the flag"
       subtitle="Februari 2019"
       url=""
-      :languages="['Git', 'SSH', 'PHP', 'Python']">
+      :languages="['Git', 'SSH', 'PHP', 'MySQL']">
       In my days of learning different things about computer science, I came
       accross CTF (Capture the flag). This is a special kind of information
       security competitions. Special mentioning
@@ -128,14 +128,14 @@
       title="Content management system"
       subtitle="Juli 2019"
       url=""
-      :languages="['MySQL', 'Laravel', 'Vue']">
+      :languages="['Laravel']">
       Serena Kloet, a great graphical designer working at ITA (International
       Theater Amsterdam), became enthousiast about the remake of the website
       for Iris van der Ende. Having a programmer at her disposal, she wanted to
       create a new design for the website. Iris van der Ende, also
       enthousiastic, would like to have a custom CMS, specially designed for
-      creating pages herself. This case she didn't had to realying on the
-      designer working in Webydoo. Challenge accepted! 
+      creating pages herself. This way, she didn't had to rely on anyone
+      updating her content. Challenge accepted! 
     </ProjectBlockLayout>
     <ProjectBlockLayout
       title="Tic-tac-toe"
@@ -148,6 +148,23 @@
       this was a real and awesome challenge!  The app did work, but not good
       enough by the job standards. I really liked the Ruby on Rails framework,
       and would love to use it again in some of my projects.
+    </ProjectBlockLayout>
+    <ProjectBlockLayout
+      title="this"
+      subtitle="September 2019"
+      url=""
+      :languages="['Vue', 'Apollo', 'GraphQL', 'Git']">
+      <blockquote
+        cite="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">
+        <code>this</code>: a property of an execution context (global, function or eval) that, in
+        non-strict mode, is always a reference to an object and in strict mode
+        can be any value.<br />
+        ~ MDN
+      </blockquote>
+      This profile page is created using the data available from the GitHub API
+      v4. I fetch the data from my own public repositories and showcase it
+      here. This pages is made using the VueJS-framework. Which created another
+      oppertunity for me learning a new webframework.
     </ProjectBlockLayout>
   </div>
 </template>
@@ -163,6 +180,12 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.container
+  max-width: $small
+  margin: 0 auto
+  > *
+    padding-left: 1rem
+    margin-bottom: 1rem
 h1
   padding-left: 1rem
 p
