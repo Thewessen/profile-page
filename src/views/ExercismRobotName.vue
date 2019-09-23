@@ -111,6 +111,7 @@
       returns an iteratable object. Hence it's a generator function (also
       called iterator).
     </p>
+    <h3>Helpfull functions</h3>
     <p>
       There are still some minor functions I didn't cover. Let's go through them
       real quick.
@@ -241,7 +242,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 img {
   max-width: 100%;
 }

@@ -1,3 +1,10 @@
 module.exports = {
-  publicPath: '/profile-page/'
+  publicPath: '/profile-page/',
+  css: {
+    loaderOptions: {
+      sass: {
+        indentedSyntax: false
+      }
+    }
+  }
 }
