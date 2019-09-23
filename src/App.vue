@@ -1,26 +1,40 @@
 <template>
-  <b-container id="app">
+  <main id="app">
+    <ul>
+      <li><router-link to="#">Home</router-link></li>
+      <li><router-link to="/CTF/OverTheWire/bandit">OverTheWire</router-link></li>
+      <li><router-link to="/Exercism/javascript">Exercism</router-link></li>
+    </ul>
     <router-view />
-  </b-container>
+  </main>
 </template>
 
 <script>
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
 export default {
   
 }
 </script>
 
-<style>
-@import '../node_modules/vue-code-highlight/themes/prism-tomorrow.css';
+<style lang="sass">
+@import '../node_modules/vue-code-highlight/themes/prism-tomorrow.css'
+@import './main.sass'
 
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: left;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+ul
+  list-style-type: none
+  margin: 0
+  padding: .5rem
+  > li
+    margin-bottom: 1rem
+
+#app
+  margin: 0
+  font-family: 'Avenir', Helvetica, Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  text-align: left
+  color: #2c3e50
+
+a
+  color: black
+
 </style>
