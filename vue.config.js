@@ -3,7 +3,7 @@ module.exports = {
   css: {
     loaderOptions: {
       sass: {
-        indentedSyntax: false
+        prependData: `@import "~@/variables.sass"`
       }
     }
   }

@@ -2,6 +2,13 @@
 
 My projects organized chronologically.
 
+## 2006
+
+Course programming on the Radboud University of Nijmegen.
+
+Talen:
+- C++
+
 ## 2016
 
 Rekenlessen op het IJburg College. Gewerkt aan [website
