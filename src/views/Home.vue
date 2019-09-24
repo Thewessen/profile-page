@@ -1,171 +1,21 @@
 <template>
-  <div class="container">
-    <h1>Chronos</h1>
+  <article>
+    <h1 class="title-black">this</h1>
+    <blockquote
+      cite="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">
+      A property of an execution context (global, function or eval) that, in
+      non-strict mode, is always a reference to an object and in strict mode
+      can be any value.<br />
+      ~ MDN
+    </blockquote>
     <p>
-      These are some of my projects I worked on since I fell in love with
-      programming. Making the computer do exactly what you like, by
-      communicating in an strict and precise, abstract language. The projects
-      are sorted by date, starting with my early days of programming, till now.
+      under construction
     </p>
-    <ProjectBlockLayout
-      title="Karel the robot"
-      subtitle="2006"
-      url=""
-      :languages="['C++']">
-      In my years of studying Mathematics at the Radboud University of
-      Nijmegen, I followed a side course called Programming. The course used
-      C++ as a language to teach multiple different aspects of programming:
-      call by value/ref, sorting algorithms, pattern matching, recursion...
-      Staring Karel the robot, who needed some A.I. for finding it's way
-      through a maze.
-    </ProjectBlockLayout>
-    <ProjectBlockLayout
-      title="Teaching calculation skills"
-      subtitle="2016"
-      url=""
-      :languages="['HTML', 'CSS', 'JavaScript', 'jQuery']">
-      While working as a math teacher on IJburg College, I created a website
-      supporting my lessons in calculation skills. IJburg College, setuated in
-      Amsterdam, is the first school in the Netherlands working with iPads
-      instead of books. Teachers working there are experienced in creating
-      their own course material. A great oppertunity for me to dive into
-      web development.
-    </ProjectBlockLayout>
-    <ProjectBlockLayout
-      title="Dreaming of ..."
-      subtitle="2017"
-      url=""
-      :languages="['Angular', 'TypeScript', 'NodeJs']">
-      Still working on my website teaching calculation skills, I dreamed about
-      creating an interactive website teaching mathmatics based on
-      self-explored learning and gamification. A friend of mine saw me
-      struggeling in jQuery and advised me to use something more advanced when
-      working with dynamic heavy content. This was my first step into using
-      frameworks for creating a website.
-    </ProjectBlockLayout>
-    <ProjectBlockLayout
-      title="Dotfiles"
-      subtitle="Januari 2019"
-      url=""
-      :languages="['Linux', 'Vim', 'Tmux', 'Bash']">
-      After a year without programming it started itching again. I decided to
-      swap carreers after this year of working as a math teacher. A proper
-      toolset is key for any developer. And now I had some time to seriously
-      work on my setup. Initially I used Vim with Tmux and Bash. Later I
-      deviated from this idea, and now using NeoVim, ZSH, with i3 as my window
-      manager.
-    </ProjectBlockLayout>
-    <ProjectBlockLayout
-      title="Iris van der Ende"
-      subtitle="Januari 2019"
-      url=""
-      :languages="['JavaScript', 'HTML', 'CSS']">
-      Iris van der Ende is a great harpist and theater maker from Amsterdam. In
-      search for a new minor project to work on, I decided to remake her
-      excisting website. Making it responsive, and giving it some additional
-      features (like background image transition on scroll). Things that she
-      found hard to do using Webydoo, the hosting server and CMS at that time. I
-      decided to not use any excistent frameworks, too consolidate myself in the
-      basics of creating a website.
-    </ProjectBlockLayout>
-    <ProjectBlockLayout
-      title="Capture the flag"
-      subtitle="Februari 2019"
-      url=""
-      :languages="['Git', 'SSH', 'PHP', 'Python']">
-      In my days of learning different things about computer science, I came
-      accross CTF (Capture the flag). This is a special kind of information
-      security competitions. Special mentioning
-      <a href="https://www.youtube.com/channel/UClcE-kVhqyiHCcjYwcpfj9w">
-        LiveOverflow
-      </a>'s
-      YouTube channel, who has some awesome research in computer security
-      and CTF writeups. Together with some beginners wargames on
-      <a href="https://www.overthewire.org">OverTheWire.org</a>,
-      it learned me alot about different aspects in the world of programming.
-      It also made me fall in love with the Python programming language.
-    </ProjectBlockLayout>
-    <ProjectBlockLayout
-      title="Hello world"
-      subtitle="April 2019"
-      url=""
-      :languages="['Python']">
-      It was time to bundle all my scripts and great idea's into one repo:
-      hello-world! Initially this repository contained some tools I needed
-      when solving some CTF challenges, in particular a (de)cipher tool. I
-      also created a Python module for creating nested(!) tables and column
-      printing them nicely. It was a great way for me to learn the Python
-      programming language, utilizing classes, modules, generators and custom
-      decorators.
-    </ProjectBlockLayout>
-    <ProjectBlockLayout
-      title="Exercism.io"
-      subtitle="May 2019"
-      url=""
-      :languages="['EcmaScript 6', 'Python', 'TypeScript']">
-      While learning from a book called <em>Exploring ES6</em>, I also started
-      some exercises on Exercism.io. This website contains exercises and tests
-      in many different languages. Together with a great community, and seeing
-      how other people create really elegant solutions to simple problems, it
-      was an awesome way for me to up my skills in EcmaScript 6. For the
-      diversity, I also did some exercises in Python and TypeScript.
-    </ProjectBlockLayout>
-    <ProjectBlockLayout
-      title="Beets genre tagger"
-      subtitle="June 2019"
-      url=""
-      :languages="['React', 'Redux', 'Apollo', 'Graphene', 'Flask']">
-      Together with a friend of mine, who worked as a programmer at that time
-      for nearly six years, we decided to do a project together: <em>Beets
-      genre tagger</em>. Beets is a media library management system. The idea of
-      this project is to create a web interface for manipulating the music
-      genre tag in an already excisting beets database. We also liked to use
-      different new exciting features, like functional React and the GraphQL
-      query language. You can easily say this applicitation is a bit
-      overenginered.
-    </ProjectBlockLayout>
-    <ProjectBlockLayout
-      title="Content management system"
-      subtitle="Juli 2019"
-      url=""
-      :languages="['MySQL', 'Laravel', 'Vue']">
-      Serena Kloet, a great graphical designer working at ITA (International
-      Theater Amsterdam), became enthousiast about the remake of the website
-      for Iris van der Ende. Having a programmer at her disposal, she wanted to
-      create a new design for the website. Iris van der Ende, also
-      enthousiastic, would like to have a custom CMS, specially designed for
-      creating pages herself. This case she didn't had to realying on the
-      designer working in Webydoo. Challenge accepted! 
-    </ProjectBlockLayout>
-    <ProjectBlockLayout
-      title="Tic-tac-toe"
-      subtitle="September 2019"
-      url=""
-      :languages="['EmberJS', 'Ruby on Rails']">
-      For a job oppertunity, they asked me to build a tic-tac-toe game in
-      EmberJS, which also utilizes a Ruby on Rails backend. With only three
-      day's to create the app, and no experience with Ruby on Rails or EmberJS,
-      this was a real and awesome challenge!  The app did work, but not good
-      enough by the job standards. I really liked the Ruby on Rails framework,
-      and would love to use it again in some of my projects.
-    </ProjectBlockLayout>
-  </div>
+  </article>
 </template>
 
 <script>
-import ProjectBlockLayout from '@/components/ProjectBlockLayout'
 export default {
   name: 'home',
-  components: {
-    ProjectBlockLayout,
-  }
 }
 </script>
-
-<style lang="sass" scoped>
-h1
-  padding-left: 1rem
-p
-  padding-left: 1rem
-  max-width: 32rem
-</style>

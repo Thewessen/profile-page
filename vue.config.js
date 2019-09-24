@@ -1,10 +1,15 @@
 module.exports = {
-  publicPath: '/profile-page/',
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/profile-page/'
+    : '/',
   css: {
     loaderOptions: {
       sass: {
-        prependData: `@import "~@/variables.sass"`
-      }
-    }
-  }
+        prependData: [
+          `@import "@/sass/variables.sass"`,
+          `@import "@/sass/mixins.sass"`,
+        ].join('\n'),
+      },
+    },
+  },
 }

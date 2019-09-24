@@ -2,18 +2,14 @@
   <div class="project-layout-container">
     <div>
       <header>
-        <h2>{{ title }}</h2>
+        <h2 :class="{ 'main-title': main }">{{ title }}</h2>
         <h5 v-if="subtitle">{{ subtitle }}</h5>
       </header>
       <div>
         <slot></slot>
       </div>
-      <router-link
-        v-if="url"
-        :to="url"
-        >show more...</router-link>
     </div>
-    <ul>
+    <ul v-if="languages.length > 0">
       <li
         v-for="(lang, index) in languages"
         :key="index">
@@ -23,6 +19,10 @@
         <div>{{ lang }}</div>
       </li>
     </ul>
+    <router-link
+      v-if="url"
+      :to="url">show more...
+    </router-link>
   </div>
 </template>
 
@@ -49,6 +49,11 @@ export default {
       default: ''
     },
   },
+  computed: {
+    main() {
+      return this.title === 'this'
+    }
+  },
   methods: {
     imgSrc(language) {
       const logos = require.context('../assets/logos/', false, /\.png$/)
@@ -65,15 +70,11 @@ export default {
 <style lang="sass" scoped>
 .project-layout-container
   width: 100%
-  padding: 1rem
   display: flex
   flex-flow: row wrap
   margin: 0
-  > *
-    margin: 0
-    padding: 0
+  margin-bottom: 2rem
   > div
-    width: 70%
     > header
       margin: 0
       margin-bottom: 1em
@@ -82,21 +83,21 @@ export default {
       max-width: 32rem
       margin-bottom: 1rem
   > ul
-    width: 30%
-
-ul
-  list-style-type: none
-  > li
-    display: flex
-    flex-flow: row nowrap
-    align-items: center
-    margin: 0
-    margin-bottom: 1rem
-    > img
-      max-width: 2rem
-    > div
-      padding-left: .5rem
-
+    list-style-type: none
+    > li
+      display: flex
+      flex-flow: row nowrap
+      align-items: center
+      margin: 0
+      margin-bottom: 1rem
+      > img
+        max-width: 2rem
+      > div
+        padding-left: .5rem
+    width: 100%
+    @include respond-to("small")
+      width: unset
+      margin-left: 2rem
 
 .icon 
   max-width: 2rem
@@ -113,4 +114,6 @@ h5
 a
   text-decoration: none
   color: grey
+  margin-bottom: 1rem
+
 </style>

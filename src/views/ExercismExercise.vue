@@ -3,38 +3,38 @@
     :query="require('../graphql/ExercismExercise.gql')"
     :update="computedData"
     :variables="{ explenation, solution }">
-  <template v-slot="{ result: { loading, error, data } }">
+    <template v-slot="{ result: { loading, error, data } }">
 
-    <!-- Loading -->
-    <div v-if="loading">Loading...</div>
+      <!-- Loading -->
+      <div v-if="loading">Loading...</div>
 
-    <!-- Error -->
-    <div v-else-if="error">An error occured</div>
+      <!-- Error -->
+      <div v-else-if="error">An error occured</div>
 
-    <!-- Data -->
-    <div v-else-if="data">
-      <b-row>
-        <h5 class="mb-4">{{ language }}</h5>
-        <b-link
-          class="ml-auto text-secondary"
-          target="_blank"
-          rel="noopener noreferrer"
-          :href="`https://github.com/Thewessen/hello-world/blob/master/Exercism/${lang}/${exercise}`">
-          view on GitHub
-        </b-link>
-      </b-row>
-      <vue-markdown>{{ data.explenation }}</vue-markdown>
-      <h2>Solution</h2>
-      <code-highlight>{{ data.solution }}</code-highlight>
-    </div>
-  </template>
-  <b-button :to="`/Exercism/${language}`" class="m-4">Back</b-button>
+      <!-- Data -->
+      <article v-else-if="data">
+        <ArticleHeading
+          :title="title"
+          :subtitle="language"
+          :github="`https://github.com/Thewessen/hello-world/blob/master/Exercism/${lang}/${exercise}`" />
+        <vue-markdown>{{ data.explenation }}</vue-markdown>
+        <h2>Solution</h2>
+        <code-highlight>{{ data.solution }}</code-highlight>
+        <button
+          @click="$router.back()">
+          Back
+        </button>
+      </article>
+    </template>
   </ApolloQuery>
 </template>
 
 <script>
 import CodeHighlight from '@/components/CodeHighlight'
 import VueMarkdown from 'vue-markdown'
+import ArticleHeading from '@/components/ArticleHeading'
+import upperFirst from 'lodash/upperFirst'
+
 export default {
   name: "ExercismExercise",
   props: {
@@ -44,6 +44,7 @@ export default {
   components: {
     CodeHighlight,
     VueMarkdown,
+    ArticleHeading,
   },
   computed: {
     exerciseFile() {
@@ -61,6 +62,9 @@ export default {
     lang() {
       return this.language.toLowerCase()
     },
+    title() {
+      return upperFirst(this.exercise)
+    },
     explenation() {
       return `master:Exercism/${this.lang}/${this.exercise}/README.md`
     },
@@ -76,9 +80,15 @@ export default {
     computedData (data) {
       let { explenation: { text }, solution } = data.repository
       if (this.lang === 'python') {
-        text = text.slice(0, text.indexOf('## Exception'))
+        text = text.slice(
+          text.indexOf('\n'),
+          text.indexOf('## Exception')
+        )
       } else {
-        text = text.slice(0, text.indexOf('## Setup'))
+        text = text.slice(
+          text.indexOf('\n'),
+          text.indexOf('## Setup')
+        )
       }
       return {
         explenation: text,
@@ -88,3 +98,18 @@ export default {
   }
 }
 </script>
+
+<style lang="sass" scoped>
+button
+  background-color: $white
+  font-family: $monospace
+  border: 1px solid $turquoise
+  font-size: 1.3rem
+  border-radius: 3px
+  padding: .5rem 2rem
+  margin: 2rem 0
+  &:hover
+    color: $white
+    background-color: $turquoise
+
+</style>

@@ -12,22 +12,20 @@
       <div v-else-if="error">An error occured</div>
 
       <!-- Data -->
-      <b-list-group v-else-if="data">
-        <b-list-group-item
+      <ul v-else-if="data">
+        <li
           v-for="exercise in data"
-          :key="exercise"
-          :to="exercise"
-          :append="true">
-          <b-badge variant="secondary">
-            <b-img
-              v-bind="iconProps"
-              :src="`https://assets.exercism.io/exercises/${exercise}-white.png`"/>
-          </b-badge>
-          <span class="ml-2">
-            {{ exercise }}
-          </span>
-        </b-list-group-item>
-      </b-list-group>
+          :key="exercise">
+          <router-link
+            :to="$route.fullPath + '/' + exercise"
+            >
+            <div class="img-container">
+              <img :src="`https://assets.exercism.io/exercises/${exercise}-white.png`"/>
+            </div>
+            <h3>{{ exercise }}</h3>
+          </router-link>
+        </li>
+      </ul>
     </template>
   </ApolloQuery>
 </template>
@@ -64,11 +62,37 @@ export default {
 }
 </script>
 
-<style scoped>
-.icon-container {
-  display: inline-block;
-  margin: -0.75rem 1.25rem calc(-0.75rem + 1px) -1.25rem;
-  width: 48px;
-  height: 48px;
-}
+<style lang="sass" scoped>
+a
+  text-decoration: none
+  color: $black
+
+
+ul
+  display: flex
+  flex-flow: row wrap
+  width: 100%
+  margin: 0 auto;
+  list-style-type: none
+  padding: 0
+  > li
+    padding: .5rem 0
+    width: 100%
+    a
+      width: 50%
+      min-width: fit-content
+      display: flex
+      flex-flow: row nowrap
+      align-items: center
+    h3
+      display: inline-block
+      padding: 0 2rem
+    .img-container
+      background-color: $turquoise
+      padding: .3rem
+      width: 4rem
+      height: 4rem
+    img
+      width: 100%
+      height: 100%
 </style>
