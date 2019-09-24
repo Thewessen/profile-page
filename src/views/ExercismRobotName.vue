@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <article>
     <b-row>
       <h5 class="mb-4">Javascript</h5>
       <b-link
@@ -167,7 +167,7 @@
     <h3>Complete code</h3>
     <CodeHighlight
       v-if="solution">{{ solution }}</CodeHighlight>
-  </div>
+  </article>
 </template>
 
 <script>
@@ -242,8 +242,7 @@ export default {
 }
 </script>
 
-<style scoped>
-img {
+<style lang="sass" scoped>
+img
   max-width: 100%;
-}
 </style>

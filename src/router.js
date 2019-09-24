@@ -2,10 +2,11 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/views/Home.vue'
 import ShowcaseProjects from '@/views/ShowcaseProjects'
-import ExercismExercise from '@/views/ExercismExercise'
+import ContactBio from '@/views/ContactBio'
 import Exercism from '@/views/Exercism'
-import OverTheWire from '@/views/OverTheWire'
+import ExercismExercise from '@/views/ExercismExercise'
 import ExercismRobotName from '@/views/ExercismRobotName'
+import OverTheWire from '@/views/OverTheWire'
 
 Vue.use(Router)
 
@@ -13,7 +14,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/projects'
+      redirect: '/home'
     },
     {
       path: '/home',
@@ -32,6 +33,11 @@ export default new Router({
       path: '/projects',
       name: 'projects',
       component: ShowcaseProjects
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: ContactBio
     },
     {
       path: '/CTF/OverTheWire/:wargame',

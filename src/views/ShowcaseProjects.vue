@@ -1,6 +1,8 @@
 <template>
   <article>
-    <h1>Chronos</h1>
+    <header>
+      <h1 class="title-green">.now()</h1>
+    </header>
     <p>
       These are some of my projects I worked on since I fell in love with
       programming. Making the computer do exactly what you like, by
@@ -155,9 +157,9 @@
       :languages="['Vue', 'Apollo', 'GraphQL', 'Git']">
       <blockquote
         cite="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">
-        <code>this</code>: a property of an execution context (global, function or eval) that, in
-        non-strict mode, is always a reference to an object and in strict mode
-        can be any value.<br />
+        <code class="main-title">this</code>: a property of an execution context
+        (global, function or eval) that, in non-strict mode, is always a
+        reference to an object and in strict mode can be any value.<br />
         ~ MDN
       </blockquote>
       This profile page is created using the data available from the GitHub API
@@ -181,7 +183,10 @@ export default {
 <style lang="sass" scoped>
 h1
   padding-left: 1rem
+
 p
   padding-left: 1rem
   max-width: 32rem
+  margin-bottom: 2rem
+
 </style>

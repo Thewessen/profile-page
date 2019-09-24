@@ -109,6 +109,8 @@ export default {
 </script>
 
 <style>
+@import '../sass/code-highlight.css';
+
 .code-highlight-wrapper code {
   font-family: inherit;
   line-height: inherit;

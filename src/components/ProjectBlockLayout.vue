@@ -8,12 +8,8 @@
       <div>
         <slot></slot>
       </div>
-      <router-link
-        v-if="url"
-        :to="url"
-        >show more...</router-link>
     </div>
-    <ul>
+    <ul v-if="languages.length > 0">
       <li
         v-for="(lang, index) in languages"
         :key="index">
@@ -23,6 +19,10 @@
         <div>{{ lang }}</div>
       </li>
     </ul>
+    <router-link
+      v-if="url"
+      :to="url">show more...
+    </router-link>
   </div>
 </template>
 
@@ -68,9 +68,7 @@ export default {
   display: flex
   flex-flow: row wrap
   margin: 0
-  > *
-    margin: 0
-    padding: 0
+  margin-bottom: 2rem
   > div
     > header
       margin: 0
@@ -111,4 +109,6 @@ h5
 a
   text-decoration: none
   color: grey
+  margin-bottom: 1rem
+
 </style>

@@ -1,5 +1,10 @@
 <template>
   <header>
+    <h1 class="main-title">
+      <router-link to="/">
+        this
+      </router-link>
+    </h1>
     <ul>
       <li>
         <router-link to="/projects">
@@ -7,7 +12,7 @@
         </router-link>
       </li>
       <li>
-        <router-link to="/chronos">
+        <router-link to="/projects">
           Date<span class="method">.now()</span>
         </router-link>
       </li>
@@ -39,6 +44,9 @@ header
 .property
   color: $pink
 
+.main-title
+  margin: 1rem
+
 ul
   list-style-type: none
   margin: 1rem
@@ -57,5 +65,6 @@ ul
       transition: opacity 0s
       opacity: 1
 a
+  color: unset
   text-decoration: none
 </style>

@@ -1,6 +1,10 @@
 @import './variables'
 
 @mixin respond-to($breakpoint)
+  @if $breakpoint == "extra-small"
+    @media (min-width: $extrasmall)
+      @content
+
   @if $breakpoint == "small"
     @media (min-width: $small)
       @content

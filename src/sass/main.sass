@@ -4,7 +4,7 @@
 *
   box-sizing: border-box
 
-body
+main
   font-family: $regular
   font-weight: 400
   color: $black
@@ -13,6 +13,7 @@ body
   -moz-osx-font-smoothing: grayscale
   text-align: left
   margin: 0
+  overflow-y: hidden
   padding: 0
   max-width: 100vw
   min-height: 100vh
@@ -22,6 +23,7 @@ article
   margin: 0 auto
   > *
     padding-left: 1rem
+    padding-right: 1rem
     margin-bottom: 1rem
 
 blockquote
@@ -30,11 +32,34 @@ blockquote
   margin-inline-start: 2rem
   margin-inline-end: 2rem
 
+blockquote::before,
+blockquote::after
+  content: ""
+
 code
-  color: $orange
+  color: $pink
+  font-family: $monospace
+
+h1
+  font-size: 1.7em
+
+a
+  color: $black
 
 #{headings(1,6)}
   font-family: $heading
 
 h5
   font-weight: 300
+
+.main-title
+  color: $purple
+  font-family: $monospace
+
+.title-pink
+  color: $pink
+  font-family: $monospace
+
+.title-green
+  color: $green
+  font-family: $monospace

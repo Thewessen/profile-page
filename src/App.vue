@@ -14,21 +14,11 @@ export default {
 }
 </script>
 
-<style lang="sass">
-@import '../node_modules/vue-code-highlight/themes/prism-tomorrow.css'
-@import '@/sass/main.sass'
-
+<style lang="sass" scoped>
 ul
   list-style-type: none
   margin: 0
   padding: .5rem
   > li
     margin-bottom: 1rem
-
-#app
-  margin: 0
-
-a
-  color: black
-
 </style>
