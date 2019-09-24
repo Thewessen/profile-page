@@ -2,7 +2,7 @@
   <div class="project-layout-container">
     <div>
       <header>
-        <h2>{{ title }}</h2>
+        <h2 :class="{ 'main-title': main }">{{ title }}</h2>
         <h5 v-if="subtitle">{{ subtitle }}</h5>
       </header>
       <div>
@@ -48,6 +48,11 @@ export default {
       type: String,
       default: ''
     },
+  },
+  computed: {
+    main() {
+      return this.title === 'this'
+    }
   },
   methods: {
     imgSrc(language) {

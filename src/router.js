@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 import Home from '@/views/Home.vue'
-import ShowcaseProjects from '@/views/ShowcaseProjects'
+import ProjectsByDate from '@/views/ProjectsByDate'
+import AllProjects from '@/views/AllProjects'
 import ContactBio from '@/views/ContactBio'
-import Exercism from '@/views/Exercism'
-import ExercismExercise from '@/views/ExercismExercise'
-import ExercismRobotName from '@/views/ExercismRobotName'
 import OverTheWire from '@/views/OverTheWire'
+
+import exercism from '@/routes/exercism-routes'
 
 Vue.use(Router)
 
@@ -14,7 +15,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/home'
+      redirect: '/date'
     },
     {
       path: '/home',
@@ -30,9 +31,9 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
     },
     {
-      path: '/projects',
-      name: 'projects',
-      component: ShowcaseProjects
+      path: '/date',
+      name: 'date',
+      component: ProjectsByDate
     },
     {
       path: '/contact',
@@ -40,27 +41,16 @@ export default new Router({
       component: ContactBio
     },
     {
+      path: '/projects',
+      name: 'projects',
+      component: AllProjects
+    },
+    {
       path: '/CTF/OverTheWire/:wargame',
       name: 'OverTheWire',
       component: OverTheWire,
       props: true,
     },
-    {
-      path: '/Exercism/RobotName',
-      name: 'RobotName',
-      component: ExercismRobotName
-    },
-    {
-      path: '/Exercism/:language/:exercise',
-      name: 'Exercism-exercise',
-      component: ExercismExercise,
-      props: true
-    },
-    {
-      path: '/Exercism/:language',
-      name: 'Exercism',
-      component: Exercism,
-      props: true
-    },
+    ...exercism
   ]
 })

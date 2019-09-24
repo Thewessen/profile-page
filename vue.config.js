@@ -8,7 +8,6 @@ module.exports = {
         prependData: [
           `@import "@/sass/variables.sass"`,
           `@import "@/sass/mixins.sass"`,
-          `@import "@/sass/main.sass"`,
         ].join('\n'),
       },
     },

@@ -12,15 +12,15 @@
       <div v-else-if="error">An error occured</div>
 
       <!-- Data -->
-      <b-button-group
-        v-else-if="data">
-        <b-button
-          variant="outline-light"
+      <ul v-else-if="data">
+        <li
           v-for="lang in data"
           :key="lang"
-          :to="`/Exercism/${lang}`"
-          :pressed="lang === language">{{ lang }}</b-button>
-      </b-button-group>
+          :class="{ active: isActive(lang) }"
+          @click="$router.push(`/Exercism/${lang}`)">
+          {{ lang }}
+        </li>
+      </ul>
     </template>
   </ApolloQuery>
 </template>
@@ -35,12 +35,48 @@ export default {
     }
   },
   methods: {
+    isActive(lang) {
+      return lang === this.language
+    },
     getEntries(data) {
       return data.repository.languages.entries
         .filter(entry => entry.type === "tree")
         .map(entry => entry.name)
         .map(lang => lang[0].toUpperCase() + lang.slice(1))
     }
-  }
+  },
 }
 </script>
+
+<style lang="sass" scoped>
+a
+  color: $black
+  text-decoration: none
+
+ul
+  display: flex
+  flex-flow: row nowrap
+  margin: 0 auto
+  margin-bottom: 2rem
+  justify-content: center
+  list-style-type: none
+  padding: 0
+  position: sticky
+  > li
+    padding: .5rem 2rem
+    border-top: 1px solid $turquoise
+    border-bottom: 1px solid $turquoise
+    border-right: 1px solid $turquoise
+    cursor: pointer
+    &:first-child
+      border-left: 1px solid $turquoise
+      border-top-left-radius: 5px
+      border-bottom-left-radius: 5px
+    &:last-child
+      border-top-right-radius: 5px
+      border-bottom-right-radius: 5px
+    &.active
+      background-color: $turquoise
+      color: $white
+      cursor: default
+</style>

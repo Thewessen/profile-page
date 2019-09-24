@@ -14,11 +14,8 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-ul
-  list-style-type: none
-  margin: 0
-  padding: .5rem
-  > li
-    margin-bottom: 1rem
+<style lang="sass">
+@import './sass/variables.sass'
+@import './sass/helpers.sass'
+@import './sass/main.sass'
 </style>

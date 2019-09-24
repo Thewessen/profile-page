@@ -1,16 +1,9 @@
 <template>
   <article>
-    <b-row>
-      <h5 class="mb-4">Javascript</h5>
-      <b-link
-        class="ml-auto text-secondary"
-        target="_blank"
-        rel="noopener noreferrer"
-        :href="`https://github.com/Thewessen/hello-world/blob/master/Exercism/javascript/robot-name`">
-        view on GitHub
-      </b-link>
-    </b-row>
-    <h1>Robot Name</h1>
+    <ArticleHeading
+      title="Robot Name"
+      subtitle="JavaScript"
+      github="https://github.com/Thewessen/hello-world/blob/master/Exercism/javascript/robot-name" />
     <h3>The exercise</h3>
     <vue-markdown v-if="explenation">{{ explenation }}</vue-markdown>
     <h3>First attempt</h3>
@@ -146,12 +139,14 @@
       <code>ascii_uppercase</code>, like the Python's <code>string</code>
       module. This way we didn't need the function and could just do
       <code>[...String.ascii_uppercase]</code>, or
-      <code>[...String.numbers]</code>. Enhancing a native JavaScript object
-      in general is bad practice, hence this function.
+      <code>[...String.numbers]</code>.
     </p>
     <h3>Tests</h3>
     <figure>
       <img src="@/assets/RobotNameTest.png" alt="Robot name test" />
+      <figcaption>
+        Screenshot
+      </figcaption>
     </figure>
     <p>
       The last test takes 7 seconds to pass, and all the tests are passed in
@@ -165,14 +160,18 @@
       in pretty much any order you would like.
     </p>
     <h3>Complete code</h3>
-    <CodeHighlight
-      v-if="solution">{{ solution }}</CodeHighlight>
+    <CodeHighlight v-if="solution">{{ solution }}</CodeHighlight>
+    <button
+      @click="$router.back()">
+      Back
+    </button>
   </article>
 </template>
 
 <script>
 import CodeHighlight from '@/components/CodeHighlight'
 import VueMarkdown from 'vue-markdown'
+import ArticleHeading from '@/components/ArticleHeading'
 import gql from 'graphql-tag'
 export default {
   name: "ExercismRobotName",
@@ -186,6 +185,7 @@ export default {
   components: {
     CodeHighlight,
     VueMarkdown,
+    ArticleHeading,
   },
   methods: {
     getLines(from, to = null, content = 'solution') {
@@ -245,4 +245,26 @@ export default {
 <style lang="sass" scoped>
 img
   max-width: 100%;
+
+figure
+  margin: 0
+  margin-bottom: 1rem
+  width: fit-content
+
+figcaption
+  font-weight: 300
+  color: grey
+  width: 100%
+
+button
+  background-color: $white
+  font-family: $monospace
+  border: 1px solid $turquoise
+  font-size: 1.3rem
+  border-radius: 3px
+  padding: .5rem 2rem
+  margin: 2rem 0
+  &:hover
+    color: $white
+    background-color: $turquoise
 </style>

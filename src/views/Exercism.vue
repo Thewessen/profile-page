@@ -58,6 +58,10 @@
       </div>
     </div>
     <h2>All solutions</h2>
+    <ListExercismLanguages
+      :language="language" />
+    <ListExercismExercises
+      :language="language" />
   </article>
 </template>
 
@@ -98,11 +102,11 @@ export default {
   flex-flow: row nowrap
   align-items: center
   padding: .5em 1em
-  border: 1px solid grey
-  border-radius: 5px
   cursor: pointer
   > .icon
     width: 4rem
+    height: 4rem
+    border-radius: 3px
     padding: 5px
     background-color: $turquoise
     > img
