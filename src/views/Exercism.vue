@@ -58,21 +58,24 @@
       </div>
     </div>
     <h2>All solutions</h2>
-    <ListExercismLanguages
-      :language="language" />
+    <ButtonList
+      :active="language"
+      :graphql="require('../graphql/ExercismLanguages.gql')"
+      baseURL="/Exercism"
+      variant="turquoise" />
     <ListExercismExercises
       :language="language" />
   </article>
 </template>
 
 <script>
+import ButtonList from '@/components/ButtonList'
 import ListExercismExercises from '@/components/ListExercismExercises'
-import ListExercismLanguages from '@/components/ListExercismLanguages'
 export default {
   name: "Exercism",
   components: {
+    ButtonList,
     ListExercismExercises,
-    ListExercismLanguages
   },
   props: {
     language: {

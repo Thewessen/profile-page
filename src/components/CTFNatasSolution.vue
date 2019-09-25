@@ -12,12 +12,12 @@
       <div v-else-if="error">An error occured</div>
 
       <!-- Data -->
-      <div class="row" v-else-if="data">
-        <div class="col-12" v-html="data.html"></div>
-        <b-row v-if="data.python">
+      <div v-else-if="data">
+        <div v-html="data.html"></div>
+        <div v-if="data.python">
           <h5>Additional script</h5>
           <code-highlight :lineNumbers="false">{{ data.python }}</code-highlight>
-        </b-row>
+        </div>
       </div>
     </template>
   </ApolloQuery>

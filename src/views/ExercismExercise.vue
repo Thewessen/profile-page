@@ -20,11 +20,8 @@
         <vue-markdown>{{ data.explenation }}</vue-markdown>
         <h2>Solution</h2>
         <code-highlight>{{ data.solution }}</code-highlight>
-        <button
-          @click="$router.back()">
-          Back
-        </button>
       </article>
+      <ButtonBack />
     </template>
   </ApolloQuery>
 </template>
@@ -33,6 +30,7 @@
 import CodeHighlight from '@/components/CodeHighlight'
 import VueMarkdown from 'vue-markdown'
 import ArticleHeading from '@/components/ArticleHeading'
+import ButtonBack from '@/components/ButtonBack'
 import upperFirst from 'lodash/upperFirst'
 
 export default {
@@ -45,6 +43,7 @@ export default {
     CodeHighlight,
     VueMarkdown,
     ArticleHeading,
+    ButtonBack,
   },
   computed: {
     exerciseFile() {
@@ -98,18 +97,3 @@ export default {
   }
 }
 </script>
-
-<style lang="sass" scoped>
-button
-  background-color: $white
-  font-family: $monospace
-  border: 1px solid $turquoise
-  font-size: 1.3rem
-  border-radius: 3px
-  padding: .5rem 2rem
-  margin: 2rem 0
-  &:hover
-    color: $white
-    background-color: $turquoise
-
-</style>

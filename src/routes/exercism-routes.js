@@ -1,5 +1,4 @@
 import Exercism from '@/views/Exercism'
-import ExercismExercise from '@/views/ExercismExercise'
 import ExercismRobotName from '@/views/ExercismRobotName'
 
 export default [
@@ -11,7 +10,10 @@ export default [
   {
     path: '/Exercism/:language/:exercise',
     name: 'Exercism-exercise',
-    component: ExercismExercise,
+    // route level code-splitting
+    // this generates a separate chunk (ExercismExercise.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "ExercismExercise" */ '@/views/ExercismExercise.vue'),
     props: true
   },
   {

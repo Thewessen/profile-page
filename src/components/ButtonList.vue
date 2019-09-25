@@ -1,7 +1,6 @@
 <template>
   <ApolloQuery
-    class="row"
-    :query="require('../graphql/ExercismLanguages.gql')"
+    :query="graphql"
     :update="getEntries">
     <template v-slot="{ result: { loading, error, data } }">
 
@@ -14,11 +13,11 @@
       <!-- Data -->
       <ul v-else-if="data">
         <li
-          v-for="lang in data"
-          :key="lang"
-          :class="{ active: isActive(lang) }"
-          @click="$router.push(`/Exercism/${lang}`)">
-          {{ lang }}
+          v-for="entry in data"
+          :key="entry"
+          :class="{ active: isActive(entry), [`color-${variant}`]: true }"
+          @click="!isActive(entry) && $router.push(`${baseURL}/${entry}`)">
+          {{ entry }}
         </li>
       </ul>
     </template>
@@ -26,23 +25,27 @@
 </template>
 
 <script>
+import upperFirst from 'lodash/upperFirst'
 export default {
-  name: 'ListExercismLanguages',
+  name: 'ButtonList',
   props: {
-    language: {
+    active: String,
+    graphql: Object,
+    baseURL: String,
+    variant: {
       type: String,
-      default: 'javascript'
+      default: 'grey'
     }
   },
   methods: {
-    isActive(lang) {
-      return lang === this.language
+    isActive(entry) {
+      return entry.toLowerCase() === this.active.toLowerCase()
     },
     getEntries(data) {
-      return data.repository.languages.entries
+      return data.repository.object.entries
         .filter(entry => entry.type === "tree")
         .map(entry => entry.name)
-        .map(lang => lang[0].toUpperCase() + lang.slice(1))
+        .map(upperFirst)
     }
   },
 }
@@ -61,22 +64,31 @@ ul
   justify-content: center
   list-style-type: none
   padding: 0
-  position: sticky
   > li
     padding: .5rem 2rem
-    border-top: 1px solid $turquoise
-    border-bottom: 1px solid $turquoise
-    border-right: 1px solid $turquoise
+    border-top: 1px solid
+    border-bottom: 1px solid
+    border-right: 1px solid
     cursor: pointer
     &:first-child
-      border-left: 1px solid $turquoise
+      border-left: 1px solid
       border-top-left-radius: 5px
       border-bottom-left-radius: 5px
     &:last-child
       border-top-right-radius: 5px
       border-bottom-right-radius: 5px
     &.active
-      background-color: $turquoise
-      color: $white
       cursor: default
+
+.color-turquoise
+  border-color: $turquoise
+  &.active
+    background-color: $turquoise
+    color: $white
+  
+.color-grey
+  border-color: grey
+  &.active
+    background-color: grey
+    color: $white
 </style>

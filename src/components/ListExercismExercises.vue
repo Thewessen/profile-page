@@ -20,9 +20,10 @@
             :to="$route.fullPath + '/' + exercise"
             >
             <div class="img-container">
-              <img :src="`https://assets.exercism.io/exercises/${exercise}-white.png`"/>
+              <img
+              :src="`https://assets.exercism.io/exercises/${exercise.toLowerCase()}-white.png`"/>
             </div>
-            <h3>{{ exercise }}</h3>
+            <p>{{ exercise }}</p>
           </router-link>
         </li>
       </ul>
@@ -31,20 +32,13 @@
 </template>
 
 <script>
+import upperFirst from 'lodash/upperFirst'
 export default {
   name: 'ListExercismExercises',
   props: {
     language: {
       type: String,
       default: 'javascript'
-    }
-  },
-  data() {
-    return {
-      iconProps: {
-        width: 48,
-        height: 48
-      }
     }
   },
   computed: {
@@ -57,6 +51,7 @@ export default {
       return data.repository.exercises.entries
         .filter(entry => entry.type === "tree")
         .map(entry => entry.name)
+        .map(upperFirst)
     }
   }
 }
@@ -79,19 +74,21 @@ ul
     padding: .5rem 0
     width: 100%
     a
-      width: 50%
+      width: 69%
       min-width: fit-content
       display: flex
       flex-flow: row nowrap
       align-items: center
-    h3
-      display: inline-block
+    p
       padding: 0 2rem
+      font-size: 1.3rem
+      font-weight: 300
     .img-container
       background-color: $turquoise
       padding: .3rem
       width: 4rem
       height: 4rem
+      border-radius: 5px
     img
       width: 100%
       height: 100%

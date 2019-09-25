@@ -2,59 +2,62 @@
   <ApolloQuery
     :query="require('../graphql/CTFNatas.gql')"
     :update="computedData">
-  <template v-slot="{ result: { loading, error, data } }">
+    <template v-slot="{ result: { loading, error, data } }">
 
-    <!-- Loading -->
-    <div v-if="loading">Loading...</div>
+      <!-- Loading -->
+      <div v-if="loading">Loading...</div>
 
-    <!-- Error -->
-    <div v-else-if="error">An error occured</div>
+      <!-- Error -->
+      <div v-else-if="error">An error occured</div>
 
-    <!-- Data -->
-    <div v-else-if="data">
-      <h1>Natas</h1>
-      <p>
-        The Natas wargame focusses on websecurity. It is developed in
-        association with NESSoS FP7 Project. Because this wargame focusses on
-        the web, I've created the writeups as html-pages. Some contain inline
-        Javascript. Later I used a sepperate python script for working with
-        requests/responses. This wargame is still unfinished.
-      </p>
-      <b-row class="justify-content-end">
-        <b-link
-          class="m-2 text-secondary"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/Thewessen/CTF/blob/master/OverTheWire/natas">
-          view on GitHub
-        </b-link>
-        <b-link
-          class="m-2 text-secondary"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://overthewire.org/wargames/natas">
-          view on OverTheWire
-        </b-link>
-      </b-row>
-      <b-row
-        v-for="level in data"
-        :key="level.name">
-        <CTFNatasSolution
-          :html="level.html"
-          :python="level.python" />
-      </b-row>
-    </div>
-  </template>
-  <b-button @click="$router.back()" class="m-4">Back</b-button>
+      <!-- Data -->
+      <div v-else-if="data">
+        <ul>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/Thewessen/CTF/blob/master/OverTheWire/natas">
+              view on GitHub
+            </a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://overthewire.org/wargames/natas">
+              view on OverTheWire.org
+            </a>
+          </li>
+        </ul>
+        <p>
+          The Natas wargame focusses on websecurity. It is developed in
+          association with NESSoS FP7 Project. Because this wargame focusses on
+          the web, I've created the writeups as html-pages. Some contain inline
+          Javascript. Later I used a sepperate python script for working with
+          requests/responses. This wargame is still unfinished.
+        </p>
+        <div
+          v-for="level in data"
+          :key="level.name">
+          <CTFNatasSolution
+            :html="level.html"
+            :python="level.python" />
+        </div>
+        <ButtonBack />
+      </div>
+    </template>
   </ApolloQuery>
 </template>
 
 <script>
 import CTFNatasSolution from '@/components/CTFNatasSolution'
+import ButtonBack from '@/components/ButtonBack'
 export default {
   name: "CTFNatas",
   components: {
     CTFNatasSolution,
+    ButtonBack,
   },
   methods: {
     computedData (data) {
@@ -80,3 +83,16 @@ export default {
   }
 }
 </script>
+
+<style lang="sass" scoped>
+ul
+  padding: 0
+  list-style-type: none
+
+li
+  padding: .5rem 0
+
+a
+  text-decoration: none
+  color: grey
+</style>

@@ -71,7 +71,7 @@
     <ProjectBlockLayout
       title="Capture the flag"
       subtitle="Februari 2019"
-      url=""
+      url="/CTF/OverTheWire/bandit"
       :languages="['Git', 'SSH', 'PHP', 'MySQL']">
       In my days of learning different things about computer science, I came
       accross CTF (Capture The Flag). This is a special kind of information
@@ -100,7 +100,7 @@
     <ProjectBlockLayout
       title="Exercism.io"
       subtitle="May 2019"
-      url="/Exercism/Javascript"
+      url="/Exercism/JavaScript"
       :languages="['EcmaScript 6', 'Python', 'TypeScript']">
       While learning from a book called <em>Exploring ES6</em>, I also started
       some exercises on Exercism.io. This website contains exercises and tests

@@ -12,7 +12,7 @@
       <div v-else-if="error">An error occured</div>
 
       <!-- Data -->
-      <div class="row" v-else-if="data">
+      <div v-else-if="data">
         <code-highlight :lineNumbers="false">{{ data }}</code-highlight>
       </div>
     </template>
