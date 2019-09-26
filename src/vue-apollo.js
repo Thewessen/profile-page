@@ -8,9 +8,11 @@ import introspectionQueryResultData from './fragmentTypes.json'
 Vue.use(VueApollo)
 
 // Name of the localStorage item
+// eslint-disable-next-line
 const AUTH_TOKEN = process.env.AUTH_TOKEN || 'apollo-token'
 
 // Http endpoint
+// eslint-disable-next-line
 const httpEndpoint = process.env.VUE_APP_GRAPHQL_HTTP || 'http://localhost:4000/graphql'
 
 // load intrespection data

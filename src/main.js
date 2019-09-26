@@ -16,6 +16,7 @@ new Vue({
     httpLinkOptions: {
       uri: 'https://api.github.com/graphql',
       headers: {
+        // eslint-disable-next-line
         authorization: 'bearer ' + process.env.VUE_APP_AUTH_TOKEN,
       }
     },

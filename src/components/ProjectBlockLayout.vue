@@ -56,6 +56,7 @@ export default {
   },
   methods: {
     imgSrc(language) {
+      // eslint-disable-next-line
       const logos = require.context('../assets/logos/', false, /\.png$/)
       if (language === 'C++') {
         language = 'cpp'
