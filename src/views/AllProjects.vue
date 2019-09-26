@@ -24,7 +24,7 @@ export default {
       pages: [
         {
           name: 'OverTheWire',
-          url: '/CTF/OverTheWire/bandit'
+          url: '/CTF/OverTheWire/Bandit'
         },
         {
           name: 'Exercism',

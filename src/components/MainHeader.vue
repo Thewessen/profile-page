@@ -66,9 +66,13 @@ export default {
 <style lang="sass" scoped>
 header
   display: flex
-  flex-flow: row nowrap
-  align-items: center
-  width: 100%
+  flex-flow: column nowrap
+  margin: 1rem
+  @include respond-to("extra-small")
+    flex-flow: row nowrap
+    align-items: center
+    justify-content: space-between
+    margin-top: 2rem
 
 .method
   color: $green
@@ -77,17 +81,23 @@ header
   color: $pink
 
 .main-title
-  margin: 1rem
+  margin: 0
 
 ul
   list-style-type: none
-  margin: 1rem
-  margin-left: auto
   display: flex
-  flex-flow: row nowrap
+  margin: 0
+  padding: 0
+  flex-flow: column nowrap
+  @include respond-to("extra-small")
+    flex-flow: row nowrap
+    align-items: center
+    justify-content: space-between
   > li
     font-family: $monospace
-    margin: 1rem
+    margin-top: .7rem
+    @include respond-to("extra-small")
+      margin: .7rem
     span
       opacity: 0
       transition: opacity 2s

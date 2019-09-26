@@ -22,6 +22,7 @@
         </blockquote>
       </div>
       <img
+        class="cover"
         src="@/assets/exploringes6.png"
         alt="Exploring ES6">
     </div>
@@ -123,4 +124,7 @@ export default {
 
 .m-2
   margin: 1em 0
+
+img.cover
+  object-fit: cover
 </style>

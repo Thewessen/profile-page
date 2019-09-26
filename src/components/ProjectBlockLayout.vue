@@ -8,6 +8,10 @@
       <div>
         <slot></slot>
       </div>
+      <router-link
+        v-if="url"
+        :to="url">show more...
+      </router-link>
     </div>
     <ul v-if="languages.length > 0">
       <li
@@ -19,10 +23,6 @@
         <div>{{ lang }}</div>
       </li>
     </ul>
-    <router-link
-      v-if="url"
-      :to="url">show more...
-    </router-link>
   </div>
 </template>
 
@@ -83,21 +83,29 @@ export default {
       max-width: 32rem
       margin-bottom: 1rem
   > ul
+    display: flex
+    flex-flow: row wrap
     list-style-type: none
+    width: 100%
+    padding: 0
+    @include respond-to("small")
+      width: unset
+      flex-flow: column nowrap
+      padding: 0 2rem
     > li
       display: flex
       flex-flow: row nowrap
       align-items: center
       margin: 0
+      padding-right: 2rem
       margin-bottom: 1rem
+      min-width: 50%
+      @include respond-to("small")
+        padding-right: 0
       > img
         max-width: 2rem
       > div
         padding-left: .5rem
-    width: 100%
-    @include respond-to("small")
-      width: unset
-      margin-left: 2rem
 
 .icon 
   max-width: 2rem
