@@ -40,24 +40,16 @@
       here.
     </p>
     <h2>Annotated solutions</h2>
-    <div
-      class="exercism-annotation-card"
-      @click="$router.push({ name: 'RobotName' })">
-      <div class="icon">
-        <img
-          :src="`https://assets.exercism.io/exercises/robot-name-white.png`"
-          alt="Robot Name Exercism exercise"/>
-      </div>
-      <div class="content">
-        <header>
-          <h3>Robot Name</h3>
-          <h5>Javascript</h5>
-        </header>
-        <p>
-          Only the bonus counts!
-        </p>
-      </div>
-    </div>
+    <ExercismAnnotated
+      exercise="matching-brackets"
+      language="JavaScript">
+      Elegant code lovers.
+    </ExercismAnnotated>
+    <ExercismAnnotated
+      exercise="robot-name"
+      language="JavaScript">
+      Only the bonus counts!
+    </ExercismAnnotated>
     <h2>All solutions</h2>
     <ButtonList
       :active="language"
@@ -72,11 +64,13 @@
 <script>
 import ButtonList from '@/components/ButtonList'
 import ListExercismExercises from '@/components/ListExercismExercises'
+import ExercismAnnotated from '@/components/ExercismAnnotated'
 export default {
   name: "Exercism",
   components: {
     ButtonList,
     ListExercismExercises,
+    ExercismAnnotated,
   },
   props: {
     language: {
@@ -100,27 +94,6 @@ export default {
   > img
     margin: 1em
     max-width: 20%
-
-.exercism-annotation-card
-  display: flex
-  flex-flow: row nowrap
-  align-items: center
-  padding: .5em 1em
-  cursor: pointer
-  > .icon
-    width: 4rem
-    height: 4rem
-    border-radius: 3px
-    padding: 5px
-    background-color: $turquoise
-    > img
-      width: 100%
-  > .content
-    > *
-      margin: 1rem
-    > header > *
-      margin: 0
-      padding: 0
 
 .m-2
   margin: 1em 0

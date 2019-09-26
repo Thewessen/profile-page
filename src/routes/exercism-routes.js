@@ -1,11 +1,17 @@
 import Exercism from '@/views/Exercism'
 import ExercismRobotName from '@/views/ExercismRobotName'
+import ExercismMatchingBrackets from '@/views/ExercismMatchingBrackets'
 
 export default [
   {
     path: '/Exercism/RobotName',
-    name: 'RobotName',
+    name: 'robot-name',
     component: ExercismRobotName
+  },
+  {
+    path: '/Exercism/MatchingBrackets',
+    name: 'matching-brackets',
+    component: ExercismMatchingBrackets
   },
   {
     path: '/Exercism/:language/:exercise',

@@ -59,7 +59,7 @@ export default {
   props: {
     wargame: {
       type: String,
-      default: 'bandit'
+      default: 'Bandit'
     }
   }
 }

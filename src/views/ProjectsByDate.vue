@@ -154,7 +154,7 @@
       url=""
       :languages="['Vue', 'Apollo', 'GraphQL', 'Git']">
       This profile page is created using the data available from the GitHub API
-      v4. I fetch the data from my own public repositories and showcase it
+      v4. The data is fetched from my own public repositories and showcased
       here. This pages is made using the VueJS-framework. Which created another
       oppertunity for me learning a new webframework.
     </ProjectBlockLayout>

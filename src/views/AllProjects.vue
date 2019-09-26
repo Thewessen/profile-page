@@ -31,6 +31,10 @@ export default {
           url: '/Exercism/JavaScript'
         },
         {
+          name: 'Matching Brackets',
+          url: '/Exercism/MatchingBrackets'
+        },
+        {
           name: 'Robot Name',
           url: '/Exercism/RobotName'
         },
