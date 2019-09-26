@@ -40,16 +40,16 @@
       here.
     </p>
     <h2>Annotated solutions</h2>
-    <ExercismAnnotated
+    <ExercismAnnotatedCard
       exercise="matching-brackets"
       language="JavaScript">
       Elegant code lovers.
-    </ExercismAnnotated>
-    <ExercismAnnotated
+    </ExercismAnnotatedCard>
+    <ExercismAnnotatedCard
       exercise="robot-name"
       language="JavaScript">
       Only the bonus counts!
-    </ExercismAnnotated>
+    </ExercismAnnotatedCard>
     <h2>All solutions</h2>
     <ButtonList
       :active="language"
@@ -64,13 +64,13 @@
 <script>
 import ButtonList from '@/components/ButtonList'
 import ListExercismExercises from '@/components/ListExercismExercises'
-import ExercismAnnotated from '@/components/ExercismAnnotated'
+import ExercismAnnotatedCard from '@/components/ExercismAnnotatedCard'
 export default {
   name: "Exercism",
   components: {
     ButtonList,
     ListExercismExercises,
-    ExercismAnnotated,
+    ExercismAnnotatedCard,
   },
   props: {
     language: {
