@@ -1,5 +1,8 @@
 <template>
-  <article>
+  <div v-if="$apollo.loading">
+    Fetching exercise from GitHub...
+  </div>
+  <article v-else>
     <ArticleHeading
       :title="title"
       :subtitle="language"
