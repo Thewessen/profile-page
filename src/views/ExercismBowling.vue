@@ -80,7 +80,7 @@
           v-if="typeof solution === 'string'"
           :startLineNumbers="64">{{ getLines(solution, 64) }}</CodeHighlight>
         <p>
-          We store the status on of the <code>this.game</code> iterable object
+          We store the status of the <code>this.game</code> iterable object
           directly on the <code>Bowling</code> object itself. This way we can
           refer to the status directly when asked for a <code>score()</code>.
           This way, we don't have to call <code>this.game.next()</code> to find

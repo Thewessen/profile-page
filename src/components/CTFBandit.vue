@@ -42,10 +42,11 @@
           For completing these CTF exercises I've created a simple login script
           utilizing sshpass.
         </p>
-        <code-highlight :lineNumbers="false">{{ loginScript }}</code-highlight>
+        <code-highlight class="mb-2" :lineNumbers="false">{{ loginScript }}</code-highlight>
         <div
           v-for="level in data"
-          :key="level.name">
+          :key="level.name"
+          class="mb-2">
           <h2>{{ level.name }}</h2>
           <code-highlight :lineNumbers="false">{{ level.text }}</code-highlight>
         </div>
@@ -97,4 +98,7 @@ li
 a
   text-decoration: none
   color: grey
+
+.mb-2
+  margin-bottom: 2rem
 </style>

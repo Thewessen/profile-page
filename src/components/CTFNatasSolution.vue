@@ -15,7 +15,7 @@
       <div v-else-if="data">
         <div v-html="data.html"></div>
         <div v-if="data.python">
-          <h5>Additional script</h5>
+          <h3>Additional script</h3>
           <code-highlight :lineNumbers="false">{{ data.python }}</code-highlight>
         </div>
       </div>
@@ -49,7 +49,9 @@ export default {
     computedData (data) {
       const pyFile = data.repository.python
       return {
-        html: data.repository.html.text,
+        html: data.repository.html.text
+          .match(/<header>.*<\/article>/s)[0]
+          .replace('article', 'div'),
         python: pyFile ? pyFile.text : null
       }
     }

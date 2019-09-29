@@ -34,9 +34,11 @@ export default {
 header
   margin: 2rem 0
   display: flex
-  flex-flow: row nowrap
-  justify-content: space-between
-  align-items: flex-start
+  flex-flow: column nowrap
+  @include respond-to('extra-small')
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: flex-start
   h1, h5
     margin: 0
     padding: 0

@@ -11,14 +11,14 @@
       is considerd by many people as a great place to start venturing into the
       world of flags, capturing as many as you can. It's completely free, and
       you don't even need an account to start playing. Games found here are
-      often rescued from other website, and hosted directly at there server.
+      often rescued from other website, and hosted directly at their server.
     </p>
     <p>
       The wargames, as the games are called here, cover a big range of
       difficulty. Starting easy, while others seem almost undoable. Multiple
-      categories of computer security are coverd: Cryptography, websecurity,
+      categories of computer security are covered: Cryptography, websecurity,
       Git, portscanning, shell, etc. I find the wargames more about learning
-      the internals of the pc, rather then preparing you to become a hacker
+      the internals of the computer, rather then preparing you to become a hacker
       (which is often a dirty word).
     </p>
     <p>
@@ -27,15 +27,15 @@
       directory if I would find myself struggeling with a problem I completed
       before.
     </p>
-    <h2>All wargames</h2>
+    <h3>Wargames</h3>
     <ButtonList
       :active="wargame"
       :graphql="require('../graphql/OverTheWireWargames.gql')"
       baseURL="/CTF/OverTheWire" />
-    <CTFBandit v-if="wargame === 'Bandit'" />
-    <CTFKrypton v-if="wargame === 'Krypton'" />
-    <CTFLeviathan v-if="wargame === 'Leviathan'" />
-    <CTFNatas v-if="wargame === 'Natas'" />
+    <CTFBandit v-if="game === 'bandit'" />
+    <CTFKrypton v-if="game === 'krypton'" />
+    <CTFLeviathan v-if="game === 'leviathan'" />
+    <CTFNatas v-if="game === 'natas'" />
   </article>
 </template>
 
@@ -60,6 +60,11 @@ export default {
     wargame: {
       type: String,
       default: 'Bandit'
+    }
+  },
+  computed: {
+    game() {
+      return this.wargame.toLowerCase()
     }
   }
 }
