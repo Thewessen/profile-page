@@ -6,7 +6,7 @@
       <template #content="{ solution }">
         <h3>First attempt</h3>
         <CodeHighlight
-          v-if="firstAttempt"
+          v-if="typeof firstAttempt === 'string'"
           :startLineNumbers="38">{{ getLines(firstAttempt, 38, 57) }}</CodeHighlight>
         <p>
           This is only the important part of the code. As you can see, it keeps
@@ -58,7 +58,7 @@
           glues them together, resulting in a new generator function.
         </p>
         <CodeHighlight
-          v-if="solution"
+          v-if="typeof solution === 'string'"
           :startLineNumbers="20">{{ getLines(solution, 20, 36) }}</CodeHighlight>
         <p>
           On <em>line 22</em> we see all characters get the given generator function
@@ -80,7 +80,7 @@
           Else, we pass the new value to the values array (<em>line 28 to 33</em>).
         </p>
         <CodeHighlight
-          v-if="solution"
+          v-if="typeof solution === 'string'"
           :startLineNumbers="67">{{ getLines(solution, 66, 74) }}</CodeHighlight>
         <p>
           All that rests us is reducing this template into one big generator, using
@@ -92,7 +92,7 @@
           gets prepended to the next chars of the template, etc.
         </p>
         <CodeHighlight
-          v-if="solution"
+          v-if="typeof solution === 'string'"
           :startLineNumbers="36">{{ getLines(solution, 36, 39) }}</CodeHighlight>
         <p>
           Notice how we immediatly invoce the returned generator. We want
@@ -108,7 +108,7 @@
           real quick.
         </p>
         <CodeHighlight
-          v-if="solution"
+          v-if="typeof solution === 'string'"
           :startLineNumbers="14">{{ getLines(solution, 14, 20) }}</CodeHighlight>
         <p>
           One of the problems I faced was depleting an iterable too early. Hence
@@ -121,7 +121,7 @@
           declerative.
         </p>
         <CodeHighlight
-          v-if="solution"
+          v-if="typeof solution === 'string'"
           :startLineNumbers="11">{{ getLines(solution, 11, 14) }}</CodeHighlight>
         <p>
           A simple random integer function. The <code>Math.random()</code> method
@@ -129,7 +129,7 @@
           to convert it to a random integer function.
         </p>
         <CodeHighlight
-          v-if="solution"
+          v-if="typeof solution === 'string'"
           :startLineNumbers="2">{{ getLines(solution, 2, 11) }}</CodeHighlight>
         <p>
           A lot of code for something very simple: creating an array of characters.
@@ -171,8 +171,8 @@ export default {
   name: "ExercismRobotName",
   data() {
     return {
-      solution: '',
-      firstAttempt: ''
+      solution: false,
+      firstAttempt: false
     }
   },
   methods: {

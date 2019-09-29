@@ -32,7 +32,7 @@
           times, after which the current frame <code>this</code> is returned.
         </p>
         <CodeHighlight
-          v-if="solution"
+          v-if="typeof solution === 'string'"
           :startLineNumbers="48">{{ getLines(solution, 48, 60) }}</CodeHighlight>
         <p>
           Take a closer look at <em>line 53</em>:
@@ -50,7 +50,7 @@
           generators.
         </p>
         <CodeHighlight
-          v-if="solution"
+          v-if="typeof solution === 'string'"
           :startLineNumbers="67">{{ getLines(solution, 67, 77) }}</CodeHighlight>
         <p>
           Another awesome recursive generator method (static this time). Is it
@@ -64,7 +64,7 @@
           <code>FRAMECOUNT</code>, which in this case is ten.
         </p>
         <CodeHighlight
-          v-if="solution"
+          v-if="typeof solution === 'string'"
           :startLineNumbers="78">{{ getLines(solution, 78, 96) }}</CodeHighlight>
         <p>
           In the last static method of the <code>Bowling class</code> the full
@@ -77,7 +77,7 @@
           out if the game is done or not.
         </p>
         <CodeHighlight
-          v-if="solution"
+          v-if="typeof solution === 'string'"
           :startLineNumbers="64">{{ getLines(solution, 64) }}</CodeHighlight>
         <p>
           We store the status on of the <code>this.game</code> iterable object
@@ -100,7 +100,7 @@ export default {
   name: "ExercismRobotName",
   data() {
     return {
-      solution: ''
+      solution: false,
     }
   },
   components: {
