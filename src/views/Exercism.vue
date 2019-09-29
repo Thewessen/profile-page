@@ -53,7 +53,7 @@
     <ExercismAnnotatedCard
       exercise="bowling"
       language="JavaScript">
-      GENERATORS: pushing and pulling.
+      Stars everywhere!
     </ExercismAnnotatedCard>
     <h2>All solutions</h2>
     <ButtonList
