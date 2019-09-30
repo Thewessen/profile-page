@@ -38,6 +38,7 @@
           requests/responses. This wargame is still unfinished.
         </p>
         <div
+          class="mb-2"
           v-for="level in data"
           :key="level.name">
           <CTFNatasSolution
@@ -66,7 +67,7 @@ export default {
           if (!entry.name.endsWith('html')) {
             return acc
           }
-          const lvl = entry.replace(/\D/g, '')
+          const lvl = entry.name.replace(/\D/g, '')
           const pyRegExp = new RegExp('\\D+' + lvl + '.py')
           const pyFile = entries
             .find(e => pyRegExp.test(e.name))
@@ -95,4 +96,7 @@ li
 a
   text-decoration: none
   color: grey
+
+.mb-2
+  margin-bottom: 2rem
 </style>

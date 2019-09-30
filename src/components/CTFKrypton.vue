@@ -36,6 +36,7 @@
         </p>
         <div
           v-for="level in data"
+          class="mb-2"
           :key="level">
           <h2>{{ level }}</h2>
           <CTFKryptonSolution :level="level" />
@@ -77,4 +78,7 @@ li
 a
   text-decoration: none
   color: grey
+
+.mb-2
+  margin-bottom: 2rem
 </style>

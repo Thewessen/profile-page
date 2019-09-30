@@ -10,7 +10,7 @@
     <div class="content">
       <header>
         <h3>{{ title }}</h3>
-        <h5 v-if="subtitle">{{ language }}</h5>
+        <h5 v-if="language">{{ language }}</h5>
       </header>
       <p>
         <slot></slot>

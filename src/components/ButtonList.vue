@@ -58,36 +58,48 @@ a
 
 ul
   display: flex
-  flex-flow: row nowrap
   margin: 0 auto
-  margin-bottom: 2rem
+  flex-flow: column nowrap
   justify-content: center
   list-style-type: none
   padding: 0
+  @include respond-to('extra-small')
+    flex-direction: row
+    margin: 2rem 0
   > li
     padding: .5rem 2rem
-    border-top: 1px solid
-    border-bottom: 1px solid
-    border-right: 1px solid
     cursor: pointer
+    border-left: 1px solid
+    border-right: 1px solid
+    border-bottom: 1px solid
+    @include respond-to('extra-small')
+      border-top: 1px solid
+      border-left: 0
     &:first-child
-      border-left: 1px solid
+      border-top: 1px solid
       border-top-left-radius: 5px
-      border-bottom-left-radius: 5px
-    &:last-child
       border-top-right-radius: 5px
+      @include respond-to('extra-small')
+        border-left: 1px solid
+        border-bottom-left-radius: 5px
+        border-top-right-radius: 0
+    &:last-child
+      border-bottom-left-radius: 5px
       border-bottom-right-radius: 5px
+      @include respond-to('extra-small')
+        border-top-right-radius: 5px
+        border-bottom-left-radius: 0
     &.active
       cursor: default
 
 .color-turquoise
-  border-color: $turquoise
+  border-color: $turquoise !important
   &.active
     background-color: $turquoise
     color: $white
   
 .color-grey
-  border-color: grey
+  border-color: grey !important
   &.active
     background-color: grey
     color: $white

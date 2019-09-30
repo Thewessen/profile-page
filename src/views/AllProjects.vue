@@ -35,6 +35,10 @@ export default {
           url: '/Exercism/MatchingBrackets'
         },
         {
+          name: 'Bowling',
+          url: '/Exercism/Bowling'
+        },
+        {
           name: 'Robot Name',
           url: '/Exercism/RobotName'
         },

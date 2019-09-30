@@ -71,7 +71,7 @@
     <ProjectBlockLayout
       title="Capture the flag"
       subtitle="Februari 2019"
-      url="/CTF/OverTheWire/bandit"
+      url="/CTF/OverTheWire/Bandit"
       :languages="['Git', 'SSH', 'PHP', 'MySQL']">
       In my days of learning different things about computer science, I came
       accross CTF (Capture The Flag). This is a special kind of information

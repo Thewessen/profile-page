@@ -1,6 +1,7 @@
 import Exercism from '@/views/Exercism'
 import ExercismRobotName from '@/views/ExercismRobotName'
 import ExercismMatchingBrackets from '@/views/ExercismMatchingBrackets'
+import ExercismBowling from '@/views/ExercismBowling'
 
 export default [
   {
@@ -12,6 +13,11 @@ export default [
     path: '/Exercism/MatchingBrackets',
     name: 'matching-brackets',
     component: ExercismMatchingBrackets
+  },
+  {
+    path: '/Exercism/Bowling',
+    name: 'bowling',
+    component: ExercismBowling
   },
   {
     path: '/Exercism/:language/:exercise',

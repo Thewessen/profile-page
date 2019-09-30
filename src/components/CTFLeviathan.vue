@@ -36,6 +36,7 @@
           the same difficulty level as OverTheWire bandit.
         </p>
         <div
+          class="mb-2"
           v-for="level in data"
           :key="level.name">
           <h2>{{ level.name }}</h2>
@@ -80,4 +81,7 @@ li
 a
   text-decoration: none
   color: grey
+
+.mb-2
+  margin-bottom: 2rem
 </style>

@@ -50,6 +50,11 @@
       language="JavaScript">
       Only the bonus counts!
     </ExercismAnnotatedCard>
+    <ExercismAnnotatedCard
+      exercise="bowling"
+      language="JavaScript">
+      Stars everywhere!
+    </ExercismAnnotatedCard>
     <h2>All solutions</h2>
     <ButtonList
       :active="language"

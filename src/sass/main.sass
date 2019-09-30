@@ -7,6 +7,8 @@
 main
   font-family: $regular
   font-weight: 400
+  font-size: 16px
+  line-height: 1.5rem
   color: $black
   background-color: $white
   -webkit-font-smoothing: antialiased
@@ -22,6 +24,8 @@ main
 article
   max-width: $small
   margin: 0 auto
+  @include respond-to('extra-small')
+    margin: 6rem auto
   padding: 0 1rem
 
 blockquote
@@ -39,7 +43,7 @@ code
   font-family: $monospace
 
 h1
-  font-size: 1.7rem
+  font-size: 2rem
 
 a
   color: $black
@@ -49,6 +53,17 @@ a
 
 h5
   font-weight: 300
+
+figure
+  margin: 0
+  margin-bottom: 1rem
+  width: fit-content
+  > img
+    max-width: 100%;
+  > figcaption
+    font-weight: 300
+    color: grey
+    width: 100%
 
 .title
   font-family: $monospace
