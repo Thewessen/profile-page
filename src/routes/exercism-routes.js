@@ -2,6 +2,7 @@ import Exercism from '@/views/Exercism'
 import ExercismRobotName from '@/views/ExercismRobotName'
 import ExercismMatchingBrackets from '@/views/ExercismMatchingBrackets'
 import ExercismBowling from '@/views/ExercismBowling'
+import ExercismKindergartenGarden from '@/views/ExercismKindergartenGarden'
 
 export default [
   {
@@ -18,6 +19,11 @@ export default [
     path: '/Exercism/Bowling',
     name: 'bowling',
     component: ExercismBowling
+  },
+  {
+    path: '/Exercism/KindergartenGarden',
+    name: 'kindergarten-garden',
+    component: ExercismKindergartenGarden
   },
   {
     path: '/Exercism/:language/:exercise',

@@ -54,6 +54,11 @@
       language="JavaScript">
       Stars everywhere!
     </ExercismAnnotatedCard>
+    <ExercismAnnotatedCard
+      exercise="kindergarten-garden"
+      language="Python">
+      Oh my beautiful Python.
+    </ExercismAnnotatedCard>
     <h2>All solutions</h2>
     <ButtonList
       :active="language"

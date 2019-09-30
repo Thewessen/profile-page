@@ -6,13 +6,16 @@
     <ArticleHeading
       :title="title"
       :subtitle="language"
-      :github="`https://github.com/Thewessen/hello-world/blob/master/Exercism/${lang}/${exercise}`" />
-    <slot name="pre"></slot>
+      :github="`https://github.com/Thewessen/hello-world/blob/master/Exercism/${lang}/${exerc}`" />
+    <slot
+      name="pre"
+      :solution="solution"
+      :explenation="explenation">
+    </slot>
     <h3>The exercise</h3>
     <vue-markdown v-if="explenation">{{ explenation }}</vue-markdown>
     <slot
       name="content"
-      v-if="data"
       :solution="solution"
       :explenation="explenation">
     </slot>
@@ -20,7 +23,6 @@
     <CodeHighlight v-if="solution">{{ solution }}</CodeHighlight>
     <slot
       name="after"
-      v-if="data"
       :solution="solution"
       :explenation="explenation"></slot>
     <ButtonBack />
@@ -54,6 +56,18 @@ export default {
     ButtonBack,
   },
   computed: {
+    exerciseFile() {
+      const ext = {
+        'python': 'py',
+        'javascript': 'js',
+        'typescript': 'ts'
+      }
+      let exercise = this.exerc
+      if (this.lang === 'python') {
+        exercise = exercise.replace('-', '_')
+      }
+      return `${exercise}.${ext[this.lang]}`
+    },
     title() {
       return this.exercise
         .split('-')
@@ -62,6 +76,9 @@ export default {
     },
     lang() {
       return this.language.toLowerCase()
+    },
+    exerc() {
+      return this.exercise.toLowerCase()
     },
     data() {
       return !this.$apollo.loading
@@ -80,12 +97,21 @@ export default {
       }`,
       variables() {
         return {
-          path: `master:Exercism/${this.lang}/${this.exercise}/README.md` 
+          path: `master:Exercism/${this.lang}/${this.exerc}/README.md` 
         }
       },
-      update: data => {
-        const content = data.repository.explenation.text
-        return content.slice(content.indexOf('\n') + 1, content.indexOf('## Setup'))
+      update(data) {
+        const { text } = data.repository.explenation
+        if (this.lang === 'python') {
+          return text.slice(
+            text.indexOf('\n') + 1,
+            text.indexOf('## Exception')
+          )
+        }
+        return text.slice(
+          text.indexOf('\n') + 1,
+          text.indexOf('## Setup')
+        )
       }
     },
     solution: {
@@ -100,7 +126,7 @@ export default {
       }`,
       variables() {
         return {
-          path: `master:Exercism/${this.lang}/${this.exercise}/${this.exercise}.js`
+          path: `master:Exercism/${this.lang}/${this.exerc}/${this.exerciseFile}`
         }
       },
       update: data => data.repository.solution.text

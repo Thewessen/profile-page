@@ -43,6 +43,10 @@ export default {
           url: '/Exercism/RobotName'
         },
         {
+          name: 'Kindergarten Garden',
+          url: '/Exercism/KindergartenGarden'
+        },
+        {
           name: 'Dates',
           url: '/date'
         },
