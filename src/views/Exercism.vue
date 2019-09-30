@@ -22,7 +22,6 @@
         </blockquote>
       </div>
       <img
-        class="cover"
         src="@/assets/exploringes6.png"
         alt="Exploring ES6">
     </div>
@@ -94,15 +93,26 @@ export default {
 <style lang="sass" scoped>
 .image-text-block
   display: flex
-  flex-flow: row nowrap
+  flex-flow: column nowrap
   justify-content: space-between
+  @include respond-to('extra-small')
+    flex-direction: row
+  > div
+    order: 3
+    @include respond-to('extra-small')
+      order: 1
   > img
-    margin: 1em
-    max-width: 20%
+    order: 2
+    margin: 1rem auto
+    object-fit: cover
+    object-position: top
+    width: 100%
+    max-height: 15rem
+    @include respond-to('extra-small')
+      object-fit: contain
+      margin-left: 1rem
 
 .m-2
   margin: 1em 0
 
-img.cover
-  object-fit: cover
 </style>

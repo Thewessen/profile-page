@@ -43,9 +43,8 @@ export default {
 .exercism-annotation-card
   display: flex
   flex-flow: row nowrap
-  align-items: center
-  padding: .5em 1em
   cursor: pointer
+  margin-bottom: 2rem
   > .icon
     width: 4rem
     height: 4rem
@@ -56,7 +55,7 @@ export default {
       width: 100%
   > .content
     > *
-      margin: 1rem
+      margin: 0 1rem
     > header > *
       margin: 0
       padding: 0
