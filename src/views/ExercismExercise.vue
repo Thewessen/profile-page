@@ -20,8 +20,8 @@
         <vue-markdown>{{ data.explenation }}</vue-markdown>
         <h2>Solution</h2>
         <code-highlight>{{ data.solution }}</code-highlight>
+        <ButtonBack />
       </article>
-      <ButtonBack />
     </template>
   </ApolloQuery>
 </template>
@@ -38,6 +38,14 @@ export default {
   props: {
     exercise: String,
     language: String,
+    previous: {
+      type: String,
+      default: null
+    },
+    next: {
+      type: String,
+      default: null
+    },
   },
   components: {
     CodeHighlight,
@@ -52,7 +60,7 @@ export default {
         'javascript': 'js',
         'typescript': 'ts'
       }
-      let exercise = this.exercise
+      let exercise = this.exerc
       if (this.lang === 'python') {
         exercise = exercise.replace('-', '_')
       }
@@ -61,16 +69,19 @@ export default {
     lang() {
       return this.language.toLowerCase()
     },
+    exerc() {
+      return this.exercise.toLowerCase()
+    },
     title() {
       return upperFirst(this.exercise)
     },
     explenation() {
-      return `master:Exercism/${this.lang}/${this.exercise}/README.md`
+      return `master:Exercism/${this.lang}/${this.exerc}/README.md`
     },
     solution() {
       return `master:Exercism/
         ${this.lang}/
-        ${this.exercise}/
+        ${this.exerc}/
         ${this.exerciseFile}`
         .replace(/\n| /g, '')
     }

@@ -113,7 +113,7 @@
       title="Beets genre tagger"
       subtitle="June 2019"
       url=""
-      :languages="['React', 'Redux', 'Apollo', 'Graphene', 'Flask']">
+      :languages="['React', 'Redux', 'Apollo', 'Graphene', 'Flask', 'SQLAlchemy']">
       Together with a friend of mine, who worked as a programmer at that time
       for nearly six years, we decided to do a project together: <em>Beets
       genre tagger</em>. Beets is a media library management system. The idea of
@@ -152,7 +152,7 @@
       title="this"
       subtitle="September 2019"
       url=""
-      :languages="['Vue', 'Apollo', 'GraphQL', 'Git']">
+      :languages="['Vue', 'Apollo', 'GraphQL', 'SASS', 'Git']">
       This profile page is created using the data available from the GitHub API
       v4. The data is fetched from my own public repositories and showcased
       here. This pages is made using the VueJS-framework. Which created another
