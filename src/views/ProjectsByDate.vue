@@ -93,9 +93,9 @@
       hello-world! Initially this repository contained some tools I needed
       when solving some CTF challenges, in particular a (de)cipher tool. I
       also created a Python module for creating nested(!) tables and column
-      printing them nicely. It was a great way for me to learn the Python
-      programming language, utilizing classes, modules, generators and custom
-      decorators.
+      printing them nicely. After it grew in size, Nested Tables got its own
+      repository. It was a great way for me to learn the Python programming
+      language, utilizing classes, modules, generators and custom decorators.
     </ProjectBlockLayout>
     <ProjectBlockLayout
       title="Exercism.io"

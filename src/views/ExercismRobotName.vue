@@ -10,7 +10,7 @@
           :startLineNumbers="38">{{ getLines(firstAttempt, 38, 57) }}</CodeHighlight>
         <p>
           This is only the important part of the code. Random names are generated
-          until one is contained in the <code>USED</code> set, at which point the
+          until one isn't contained in the <code>USED</code> set, at which point the
           name is pushed to the <code>USED</code> set and returned.
         </p>
         <p>
