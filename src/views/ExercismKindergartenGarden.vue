@@ -16,7 +16,7 @@
         </p>
         <p>
           Take for example the next code snippet. List comprehensions can be
-          used inside dictionaries, to create a big dictionary with just a few
+          used inside dictionaries to create a big dictionary with just a few
           lines of code. In this snippet, <code>child</code> and
           <code>plants</code> get destructured out of the native
           <code>zip</code> function and placed as key/value pairs on the
@@ -36,8 +36,7 @@
           Beautiful, isn't it? So much power in such a few lines of code. The rest
           of the solution just builds around these few lines. If you want to
           know more about the context of this code snippet, and the meaning of all the
-          variables, please read on. Following the explenation of the exercise
-          and the full solution.
+          variables, please read on. Following the explenation and solution of the exercise.
         </p>
       </template>
     </ExercismAnnotation>

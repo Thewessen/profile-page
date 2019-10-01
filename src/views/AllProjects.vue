@@ -23,6 +23,10 @@ export default {
     return {
       pages: [
         {
+          name: 'Laravel',
+          url: '/IVDE/Laravel'
+        },
+        {
           name: 'OverTheWire',
           url: '/CTF/OverTheWire/Bandit'
         },

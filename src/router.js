@@ -6,6 +6,7 @@ import ProjectsByDate from '@/views/ProjectsByDate'
 import AllProjects from '@/views/AllProjects'
 import About from '@/views/About'
 import OverTheWire from '@/views/OverTheWire'
+import Laravel from '@/views/Laravel'
 
 import exercism from '@/routes/exercism-routes'
 
@@ -36,6 +37,11 @@ export default new Router({
       path: '/projects',
       name: 'projects',
       component: AllProjects
+    },
+    {
+      path: '/IVDE/Laravel',
+      name: 'laravel',
+      component: Laravel
     },
     {
       path: '/CTF/OverTheWire/:wargame',
