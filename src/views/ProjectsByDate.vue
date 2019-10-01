@@ -174,6 +174,6 @@ export default {
 <style lang="sass" scoped>
 p
   max-width: 32rem
-  margin-bottom: 2rem
+  margin-bottom: 3rem
 
 </style>
