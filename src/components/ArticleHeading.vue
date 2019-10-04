@@ -4,18 +4,19 @@
       <h1>{{ title }}</h1>
       <h5 v-if="subtitle">{{ subtitle }}</h5>
     </div>
-    <a
-      target="_blank"
-      rel="noopener noreferrer"
-      :href="github">
+    <ext-link :url="github">
       view on GitHub
-    </a>
+    </ext-link>
   </header>
 </template>
 
 <script>
+import ExtLink from '@/components/ExternLink'
 export default {
   name: "ArticleHeader",
+  components: {
+    ExtLink,
+  },
   props: {
     title: String,
     subtitle: {

@@ -14,20 +14,14 @@
       <div v-else-if="data">
         <ul>
           <li>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/Thewessen/CTF/blob/master/OverTheWire/natas">
+            <ext-link url="https://github.com/Thewessen/CTF/blob/master/OverTheWire/natas">
               view on GitHub
-            </a>
+            </ext-link>
           </li>
           <li>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://overthewire.org/wargames/natas">
+            <ext-link url="https://overthewire.org/wargames/natas">
               view on OverTheWire.org
-            </a>
+            </ext-link>
           </li>
         </ul>
         <p>
@@ -54,11 +48,13 @@
 <script>
 import CTFNatasSolution from '@/components/CTFNatasSolution'
 import ButtonBack from '@/components/ButtonBack'
+import ExtLink from '@/components/ExternLink'
 export default {
   name: "CTFNatas",
   components: {
     CTFNatasSolution,
     ButtonBack,
+    ExtLink,
   },
   methods: {
     computedData (data) {

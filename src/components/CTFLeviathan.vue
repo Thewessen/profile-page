@@ -14,20 +14,14 @@
       <div v-else-if="data">
         <ul>
           <li>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/Thewessen/CTF/blob/master/OverTheWire/leviathan">
+            <ext-link url="https://github.com/Thewessen/CTF/blob/master/OverTheWire/leviathan">
               view on GitHub
-            </a>
+            </ext-link>
           </li>
           <li>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://overthewire.org/wargames/leviathan">
+            <ext-link url="https://overthewire.org/wargames/leviathan">
               view on OverTheWire.org
-            </a>
+            </ext-link>
           </li>
         </ul>
         <p>
@@ -51,12 +45,14 @@
 <script>
 import CodeHighlight from '@/components/CodeHighlight'
 import ButtonBack from '@/components/ButtonBack'
+import ExtLink from '@/components/ExternLink'
 
 export default {
   name: "CTFLeviathan",
   components: {
     CodeHighlight,
     ButtonBack,
+    ExtLink,
   },
   methods: {
     computedData (data) {

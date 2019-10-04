@@ -5,9 +5,7 @@
       subtitle="Capture The Flag"
       github="https://github.com/Thewessen/CTF/tree/master/OverTheWire" />
     <p>
-      <a href="https://www.overthewire.org" rel="noopener noreferer" target="_blank">
-        OverTheWire.org
-      </a>
+      <ext-link href="https://www.overthewire.org">OverTheWire.org</ext-link>
       is considerd by many people as a great place to start venturing into the
       world of flags, capturing as many as you can. It's completely free, and
       you don't even need an account to start playing. Games found here are
@@ -41,6 +39,7 @@
 
 <script>
 import ButtonList from '@/components/ButtonList'
+import ExtLink from '@/components/ExternLink'
 import ArticleHeading from '@/components/ArticleHeading'
 import CTFBandit from '@/components/CTFBandit'
 import CTFKrypton from '@/components/CTFKrypton'
@@ -50,6 +49,7 @@ export default {
   name: "OverTheWire",
   components: {
     ButtonList,
+    ExtLink,
     ArticleHeading,
     CTFBandit,
     CTFKrypton,

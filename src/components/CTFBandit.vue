@@ -14,20 +14,14 @@
       <div v-else-if="data">
         <ul>
           <li>
-            <a
-              href="https://github.com/Thewessen/CTF/blob/master/OverTheWire/bandit"
-              target="_blank"
-              rel="noopener noreferrer">
+            <ext-link url="https://github.com/Thewessen/CTF/blob/master/OverTheWire/bandit">
               view on GitHub
-            </a>
+            </ext-link>
           </li>
           <li>
-            <a
-              href="https://overthewire.org/wargames/bandit"
-              target="_blank"
-              rel="noopener noreferrer">
+            <ext-link url="https://overthewire.org/wargames/bandit">
               view on OverTheWire.org
-            </a>
+            </ext-link>
           </li>
         </ul>
         <p>
@@ -59,6 +53,7 @@
 <script>
 import CodeHighlight from '@/components/CodeHighlight'
 import ButtonBack from '@/components/ButtonBack'
+import ExtLink from '@/components/ExternLink'
 export default {
   name: "CTFBandit",
   data() {
@@ -69,6 +64,7 @@ export default {
   components: {
     CodeHighlight,
     ButtonBack,
+    ExtLink,
   },
   methods: {
     computedData (data) {

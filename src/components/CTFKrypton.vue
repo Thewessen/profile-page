@@ -14,20 +14,14 @@
       <div v-else-if="data">
         <ul>
           <li>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/Thewessen/CTF/blob/master/OverTheWire/krypton">
+            <ext-link url="https://github.com/Thewessen/CTF/blob/master/OverTheWire/krypton">
               view on GitHub
-            </a>
+            </ext-link>
           </li>
           <li>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://overthewire.org/wargames/krypton">
+            <ext-link url="https://overthewire.org/wargames/krypton">
               view on OverTheWire.org
-            </a>
+            </ext-link>
           </li>
         </ul>
         <p>
@@ -50,12 +44,14 @@
 <script>
 import CTFKryptonSolution from '@/components/CTFKryptonSolution'
 import ButtonBack from '@/components/ButtonBack'
+import ExtLink from '@/components/ExternLink'
 
 export default {
   name: "CTFKrypton",
   components: {
     CTFKryptonSolution,
     ButtonBack,
+    ExtLink,
   },
   methods: {
     computedData (data) {

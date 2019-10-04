@@ -48,39 +48,39 @@
       subtitle="Januari 2019"
       url=""
       :languages="['Linux', 'Vim', 'Tmux', 'Bash']">
-      After a year without programming it started itching again. I decided to
-      swap carreers after this year of working as a math teacher. A proper
-      toolset is key for any developer. And now I had some time to seriously
-      work on my setup. Initially I used Vim with Tmux and Bash. Later I
-      deviated from this idea, and now using NeoVim, ZSH, with i3 as my window
-      manager.
+    After a year without programming it started itching again. I decided to
+    swap carreers after this year of working as a math teacher. A proper
+    toolset is key for any developer. And now I had some time to seriously
+    work on my setup. Initially I used Vim with Tmux and Bash. Later I
+    deviated from this idea, and now using NeoVim, ZSH, with i3 as my window
+    manager.
     </ProjectBlockLayout>
     <ProjectBlockLayout
       title="Iris van der Ende"
       subtitle="Januari 2019"
       url=""
       :languages="['JavaScript', 'HTML', 'CSS']">
-      Iris van der Ende is a great harpist and theater maker from Amsterdam. In
-      search for a new minor project to work on, I decided to remake her
-      excisting website. Making it responsive, and giving it some additional
-      features (like background image transition on scroll). Things that she
-      found hard to do using Webydoo, the hosting server and CMS at that time. I
-      decided to not use any excistent frameworks, too consolidate myself in the
-      basics of creating a website.
+    Iris van der Ende is a great harpist and theater maker from Amsterdam. In
+    search for a new minor project to work on, I decided to remake her
+    excisting website. Making it responsive, and giving it some additional
+    features (like background image transition on scroll). Things that she
+    found hard to do using Webydoo, the hosting server and CMS at that time. I
+    decided to not use any excistent frameworks, too consolidate myself in the
+    basics of creating a website.
     </ProjectBlockLayout>
     <ProjectBlockLayout
       title="Capture the flag"
       subtitle="Februari 2019"
       url="/CTF/OverTheWire/Bandit"
       :languages="['Git', 'SSH', 'PHP', 'MySQL']">
-      In my days of learning different things about computer science, I came
-      accross CTF (Capture The Flag). This is a special kind of information
-      security competitions. Special mentioning
-      <a href="https://www.youtube.com/channel/UClcE-kVhqyiHCcjYwcpfj9w">
-        LiveOverflow</a>'s
+    In my days of learning different things about computer science, I came
+    accross CTF (Capture The Flag). This is a special kind of information
+    security competitions. Special mentioning
+    <ext-link url="https://www.youtube.com/channel/UClcE-kVhqyiHCcjYwcpfj9w">
+        LiveOverflow</ext-link>'s
       YouTube channel, who has some awesome research in computer security
       and CTF writeups. Together with some beginners wargames on
-      <a href="https://www.overthewire.org">OverTheWire.org</a>,
+      <ext-link url="https://www.overthewire.org">OverTheWire.org</ext-link>,
       I learned a lot about different aspects in the world of programming.
       It also made me fall in love with the Python programming language.
     </ProjectBlockLayout>
@@ -163,10 +163,13 @@
 
 <script>
 import ProjectBlockLayout from '@/components/ProjectBlockLayout'
+import ExtLink from '@/components/ExternLink'
+
 export default {
   name: 'ShowcaseProjects',
   components: {
     ProjectBlockLayout,
+    ExtLink,
   }
 }
 </script>
