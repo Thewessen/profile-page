@@ -20,12 +20,8 @@
 </template>
 
 <script>
-import CodeHighlight from '@/components/CodeHighlight'
 export default {
   name: "CTFKrypton",
-  components: {
-    CodeHighlight
-  },
   props: {
     level: String
   },

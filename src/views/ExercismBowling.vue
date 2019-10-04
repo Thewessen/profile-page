@@ -93,7 +93,6 @@
 
 <script>
 import ExercismAnnotation from '@/components/ExercismAnnotation'
-import CodeHighlight from '@/components/CodeHighlight'
 import getLines from '@/helpers/getLines'
 
 export default {
@@ -104,7 +103,6 @@ export default {
     }
   },
   components: {
-    CodeHighlight,
     ExercismAnnotation,
   },
   methods: {

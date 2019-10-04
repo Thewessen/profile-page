@@ -47,14 +47,10 @@
 
 <script>
 import CTFNatasSolution from '@/components/CTFNatasSolution'
-import ButtonBack from '@/components/ButtonBack'
-import ExtLink from '@/components/ExternLink'
 export default {
   name: "CTFNatas",
   components: {
     CTFNatasSolution,
-    ButtonBack,
-    ExtLink,
   },
   methods: {
     computedData (data) {

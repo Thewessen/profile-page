@@ -163,13 +163,11 @@
 
 <script>
 import ProjectBlockLayout from '@/components/ProjectBlockLayout'
-import ExtLink from '@/components/ExternLink'
 
 export default {
   name: 'ShowcaseProjects',
   components: {
     ProjectBlockLayout,
-    ExtLink,
   }
 }
 </script>

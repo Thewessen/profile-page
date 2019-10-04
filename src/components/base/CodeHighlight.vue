@@ -102,7 +102,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import '../sass/code-highlight.css'
+@import '../../sass/code-highlight.css'
 
 .code-highlight-wrapper
   display: flex

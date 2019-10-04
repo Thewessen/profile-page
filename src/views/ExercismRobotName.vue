@@ -160,7 +160,6 @@
 
 <script>
 import ExercismAnnotation from '@/components/ExercismAnnotation'
-import CodeHighlight from '@/components/CodeHighlight'
 import getLines from '@/helpers/getLines'
 import gql from 'graphql-tag'
 export default {
@@ -175,7 +174,6 @@ export default {
     getLines,
   },
   components: {
-    CodeHighlight,
     ExercismAnnotation,
   },
   apollo: {

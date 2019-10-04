@@ -2,14 +2,49 @@ import Vue from 'vue'
 import App from './App.vue'
 import { createProvider } from './vue-apollo'
 import router from './router'
+import VueMarkdown from 'vue-markdown'
+import upperFirst from 'lodash/upperFirst'
+import camelCase from 'lodash/camelCase'
 
 Vue.config.productionTip = false
 
 // Some aditions
 import { InMemoryCache } from 'apollo-cache-inmemory'
-import VueCodeHightlight from 'vue-code-highlight'
 
-Vue.use(VueCodeHightlight)
+// Global component registration
+Vue.component(
+  'VueMarkdown',
+  // Look for the component options on `.default`, which will
+  // exist if the component was exported with `export default`,
+  // otherwise fall back to module's root.
+  VueMarkdown.default || VueMarkdown
+)
+
+// eslint-disable-next-line
+const requireComponent = require.context(
+  './components/base', false, /\w+\.(vue|js)$/
+)
+
+// register all components found in @/components/base
+requireComponent.keys().forEach(fileName => {
+  const componentConfig = requireComponent(fileName)
+
+  // get filename of the component PascalCase
+  const componentName = upperFirst(
+    camelCase(
+      fileName
+        .split('/')
+        .pop()
+        .replace(/\.\w+$/, '')
+    )
+  )
+
+  // Register component globally
+  Vue.component(
+    componentName,
+    componentConfig.default || componentConfig
+  )
+})
 
 new Vue({
   apolloProvider: createProvider({

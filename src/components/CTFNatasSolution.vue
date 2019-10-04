@@ -24,12 +24,8 @@
 </template>
 
 <script>
-import CodeHighlight from '@/components/CodeHighlight'
 export default {
   name: "CTFNatas",
-  components: {
-    CodeHighlight,
-  },
   props: {
     html: String,
     python: {

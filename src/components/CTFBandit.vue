@@ -51,20 +51,12 @@
 </template>
 
 <script>
-import CodeHighlight from '@/components/CodeHighlight'
-import ButtonBack from '@/components/ButtonBack'
-import ExtLink from '@/components/ExternLink'
 export default {
   name: "CTFBandit",
   data() {
     return {
       loginScript: null
     }
-  },
-  components: {
-    CodeHighlight,
-    ButtonBack,
-    ExtLink,
   },
   methods: {
     computedData (data) {

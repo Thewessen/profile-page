@@ -30,10 +30,6 @@
 </template>
 
 <script>
-import CodeHighlight from '@/components/CodeHighlight'
-import VueMarkdown from 'vue-markdown'
-import ArticleHeading from '@/components/ArticleHeading'
-import ButtonBack from '@/components/ButtonBack'
 import gql from 'graphql-tag'
 import upperFirst from 'lodash/upperFirst'
 
@@ -48,12 +44,6 @@ export default {
   props: {
     exercise: String,
     language: String
-  },
-  components: {
-    CodeHighlight,
-    VueMarkdown,
-    ArticleHeading,
-    ButtonBack,
   },
   computed: {
     exerciseFile() {

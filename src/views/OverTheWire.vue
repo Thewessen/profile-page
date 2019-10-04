@@ -39,8 +39,6 @@
 
 <script>
 import ButtonList from '@/components/ButtonList'
-import ExtLink from '@/components/ExternLink'
-import ArticleHeading from '@/components/ArticleHeading'
 import CTFBandit from '@/components/CTFBandit'
 import CTFKrypton from '@/components/CTFKrypton'
 import CTFLeviathan from '@/components/CTFLeviathan'
@@ -49,8 +47,6 @@ export default {
   name: "OverTheWire",
   components: {
     ButtonList,
-    ExtLink,
-    ArticleHeading,
     CTFBandit,
     CTFKrypton,
     CTFLeviathan,

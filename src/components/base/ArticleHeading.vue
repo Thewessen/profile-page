@@ -11,12 +11,8 @@
 </template>
 
 <script>
-import ExtLink from '@/components/ExternLink'
 export default {
   name: "ArticleHeader",
-  components: {
-    ExtLink,
-  },
   props: {
     title: String,
     subtitle: {

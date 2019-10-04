@@ -118,9 +118,6 @@
 </template>
 
 <script>
-import ArticleHeading from '@/components/ArticleHeading'
-import ExtLink from '@/components/ExternLink'
-import CodeHighlight from '@/components/CodeHighlight'
 import getLines from '@/helpers/getLines'
 import gql from 'graphql-tag'
 
@@ -154,11 +151,6 @@ export default {
           ];
         });`
     }
-  },
-  components: {
-    ArticleHeading,
-    ExtLink,
-    CodeHighlight,
   },
   methods: {
     getLines,

@@ -43,17 +43,8 @@
 </template>
 
 <script>
-import CodeHighlight from '@/components/CodeHighlight'
-import ButtonBack from '@/components/ButtonBack'
-import ExtLink from '@/components/ExternLink'
-
 export default {
   name: "CTFLeviathan",
-  components: {
-    CodeHighlight,
-    ButtonBack,
-    ExtLink,
-  },
   methods: {
     computedData (data) {
       return data.repository.object.entries

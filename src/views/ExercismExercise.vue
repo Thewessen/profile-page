@@ -16,7 +16,7 @@
         <ArticleHeading
           :title="title"
           :subtitle="language"
-          :github="`https://github.com/Thewessen/hello-world/blob/master/Exercism/${lang}/${exercise}`" />
+          :github="`https://github.com/Thewessen/hello-world/blob/master/Exercism/${lang}/${exerc}`" />
         <vue-markdown>{{ data.explenation }}</vue-markdown>
         <h2>Solution</h2>
         <code-highlight>{{ data.solution }}</code-highlight>
@@ -27,10 +27,6 @@
 </template>
 
 <script>
-import CodeHighlight from '@/components/CodeHighlight'
-import VueMarkdown from 'vue-markdown'
-import ArticleHeading from '@/components/ArticleHeading'
-import ButtonBack from '@/components/ButtonBack'
 import upperFirst from 'lodash/upperFirst'
 
 export default {
@@ -46,12 +42,6 @@ export default {
       type: String,
       default: null
     },
-  },
-  components: {
-    CodeHighlight,
-    VueMarkdown,
-    ArticleHeading,
-    ButtonBack,
   },
   computed: {
     exerciseFile() {

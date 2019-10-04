@@ -43,15 +43,11 @@
 
 <script>
 import CTFKryptonSolution from '@/components/CTFKryptonSolution'
-import ButtonBack from '@/components/ButtonBack'
-import ExtLink from '@/components/ExternLink'
 
 export default {
   name: "CTFKrypton",
   components: {
     CTFKryptonSolution,
-    ButtonBack,
-    ExtLink,
   },
   methods: {
     computedData (data) {

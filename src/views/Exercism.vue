@@ -74,14 +74,12 @@
 import ButtonList from '@/components/ButtonList'
 import ListExercismExercises from '@/components/ListExercismExercises'
 import ExercismAnnotatedCard from '@/components/ExercismAnnotatedCard'
-import ExtLink from '@/components/ExternLink'
 export default {
   name: "Exercism",
   components: {
     ButtonList,
     ListExercismExercises,
     ExercismAnnotatedCard,
-    ExtLink,
   },
   props: {
     language: {
