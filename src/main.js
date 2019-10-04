@@ -22,7 +22,7 @@ Vue.component(
 
 // eslint-disable-next-line
 const requireComponent = require.context(
-  './components/base', false, /\w+\.(vue|js)$/
+  './components/base_components', false, /\w+\.(vue|js)$/
 )
 
 // register all components found in @/components/base
