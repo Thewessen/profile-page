@@ -2,9 +2,9 @@
   <article>
     <h1>Dates</h1>
     <p>
-      These are some of my projects I worked on since I fell in love with
-      programming. Making the computer do exactly what you like, by
-      communicating in an strict and precise, abstract language. The projects
+      These are some of the projects I worked on since I fell in love with
+      programming. Making the computer do exactly what you want it to do, by
+      communicating in a strict and precise, abstract language. The projects
       are sorted by date, starting with my early days of programming, till now.
     </p>
     <ProjectBlockLayout
@@ -24,11 +24,11 @@
       subtitle="2016"
       url=""
       :languages="['HTML', 'CSS', 'JavaScript', 'jQuery']">
-      While working as a math teacher on IJburg College, I created a website
-      supporting my lessons in calculation skills. IJburg College, setuated in
+      While working as a math teacher at IJburg College, I created a website
+      supporting my lessons in calculation skills. IJburg College, situated in
       Amsterdam, is the first school in the Netherlands working with iPads
       instead of books. Teachers working there are experienced in creating
-      their own course material. A great oppertunity for me to dive into
+      their own course material. A great opportunity for me to dive into
       web development.
     </ProjectBlockLayout>
     <ProjectBlockLayout
@@ -37,7 +37,7 @@
       url=""
       :languages="['Angular', 'TypeScript', 'NodeJs']">
       Still working on my website teaching calculation skills, I dreamed about
-      creating an interactive website teaching mathmatics based on
+      creating an interactive website teaching math based on
       self-explored learning and gamification. A friend of mine saw me
       struggeling in jQuery and advised me to use something more advanced when
       working with dynamic heavy content. This was my first step into using
@@ -48,24 +48,23 @@
       subtitle="Januari 2019"
       url=""
       :languages="['Linux', 'Vim', 'Tmux', 'Bash']">
-      After a year without programming it started itching again. I decided to
-      swap carreers after this year of working as a math teacher. A proper
-      toolset is key for any developer. And now I had some time to seriously
-      work on my setup. Initially I used Vim with Tmux and Bash. Later I
-      deviated from this idea, and now using NeoVim, ZSH, with i3 as my window
-      manager.
+      After a year without programming it felt the itch again. I decided to
+      swap carreers after another year of teaching math. A proper toolset is
+      key for any developer. And now I had some time to seriously work on my
+      setup. Initially I used Vim with Tmux and Bash. Later I deviated from
+      this idea, and now I'm using NeoVim, ZSH, with i3 as my window manager.
     </ProjectBlockLayout>
     <ProjectBlockLayout
       title="Iris van der Ende"
       subtitle="Januari 2019"
       url=""
       :languages="['JavaScript', 'HTML', 'CSS']">
-      Iris van der Ende is a great harpist and theater maker from Amsterdam. In
+      Iris van der Ende is a great harpist and theatre maker from Amsterdam. In
       search for a new minor project to work on, I decided to remake her
-      excisting website. Making it responsive, and giving it some additional
+      excisting website. To make it responsive, and give it some additional
       features (like background image transition on scroll). Things that she
       found hard to do using Webydoo, the hosting server and CMS at that time. I
-      decided to not use any excistent frameworks, too consolidate myself in the
+      decided to not use any existing frameworks, too consolidate myself in the
       basics of creating a website.
     </ProjectBlockLayout>
     <ProjectBlockLayout
@@ -73,8 +72,8 @@
       subtitle="Februari 2019"
       url="/CTF/OverTheWire/Bandit"
       :languages="['Git', 'SSH', 'PHP', 'MySQL']">
-      In my days of learning different things about computer science, I came
-      accross CTF (Capture The Flag). This is a special kind of information
+      While learning different things about computer science, I came
+      across CTF (Capture The Flag). This is a special kind of information
       security competitions. Special mentioning
       <a href="https://www.youtube.com/channel/UClcE-kVhqyiHCcjYwcpfj9w">
         LiveOverflow</a>'s
@@ -89,7 +88,7 @@
       subtitle="April 2019"
       url=""
       :languages="['Python']">
-      It was time to bundle all my scripts and great idea's into one repo:
+      It was time to bundle all my scripts and idea's into one repo:
       hello-world! Initially this repository contained some tools I needed
       when solving some CTF challenges, in particular a (de)cipher tool. I
       also created a Python module for creating nested(!) tables and column
@@ -104,10 +103,10 @@
       :languages="['EcmaScript 6', 'Python', 'TypeScript']">
       While learning from a book called <em>Exploring ES6</em>, I also started
       some exercises on Exercism.io. This website contains exercises and tests
-      in many different languages. Together with a great community, and seeing
-      how other people create really elegant solutions to simple problems, it
-      was an awesome way for me to up my skills in EcmaScript 6. For the
-      diversity, I also did some exercises in Python and TypeScript.
+      in many different languages. Together with its wonderfull community,
+      seeing how other people create really elegant solutions to simple
+      problems, it was an awesome way for me to up my skills in EcmaScript 6.
+      For diversity's sake, I also did some exercises in Python and TypeScript.
     </ProjectBlockLayout>
     <ProjectBlockLayout
       title="Beets genre tagger"
@@ -120,8 +119,7 @@
       this project is to create a web interface for manipulating the music
       genre tag in an already excisting beets database. We also liked to use
       different new exciting features, like functional React and the GraphQL
-      query language. You can easily say this applicitation is a bit
-      overenginered.
+      query language. One could say this applicitation is a bit overenginered.
     </ProjectBlockLayout>
     <ProjectBlockLayout
       title="Content management system"
@@ -133,20 +131,20 @@
       for Iris van der Ende. Having a programmer at her disposal, she wanted to
       create a new design for the website. Iris van der Ende, also
       enthousiastic, would like to have a custom CMS, specially designed for
-      creating pages herself. This way, she didn't had to rely on anyone
-      updating her content. Challenge accepted! 
+      creating pages herself. This way, she didn't have to rely on another
+      person updating her content. Challenge accepted! 
     </ProjectBlockLayout>
     <ProjectBlockLayout
       title="Tic-tac-toe"
       subtitle="September 2019"
       url=""
       :languages="['EmberJS', 'Ruby on Rails']">
-      For a job oppertunity, they asked me to build a tic-tac-toe game in
+      For a job opportunity, I've been asked to build a tic-tac-toe game in
       EmberJS, which also utilizes a Ruby on Rails backend. With only three
       day's to create the app, and no experience with Ruby on Rails or EmberJS,
       this was a real and awesome challenge!  The app did work, but not good
       enough by the job standards. I really liked the Ruby on Rails framework,
-      and would love to use it again in some of my projects.
+      and would love to use it again in some other of my projects.
     </ProjectBlockLayout>
     <ProjectBlockLayout
       title="this"
@@ -156,7 +154,7 @@
       This profile page is created using the data available from the GitHub API
       v4. The data is fetched from my own public repositories and showcased
       here. This pages is made using the VueJS-framework. Which created another
-      oppertunity for me learning a new webframework.
+      opportunity for me to learn a new webframework.
     </ProjectBlockLayout>
   </article>
 </template>
