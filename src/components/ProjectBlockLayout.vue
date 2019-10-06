@@ -89,10 +89,13 @@ export default {
     list-style-type: none
     width: 100%
     padding: 0
+    margin: 0
+    margin-top: 1rem
     @include respond-to("small")
       width: unset
       flex-flow: column nowrap
       padding: 0 2rem
+      margin-top: 0
     > li
       display: flex
       flex-flow: row nowrap
