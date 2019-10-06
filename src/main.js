@@ -7,9 +7,6 @@ Vue.config.productionTip = false
 
 // Some aditions
 import { InMemoryCache } from 'apollo-cache-inmemory'
-import VueCodeHightlight from 'vue-code-highlight'
-
-Vue.use(VueCodeHightlight)
 
 new Vue({
   apolloProvider: createProvider({

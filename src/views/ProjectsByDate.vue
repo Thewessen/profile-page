@@ -152,9 +152,11 @@
       url=""
       :languages="['Vue', 'Apollo', 'GraphQL', 'SASS', 'Git']">
       This profile page is created using the data available from the GitHub API
-      v4. The data is fetched from my own public repositories and showcased
-      here. This pages is made using the VueJS-framework. Which created another
-      opportunity for me to learn a new webframework.
+      v4. This pages is made using the VueJS-framework. Which created another
+      opportunity for me to learn a new webframework. It is a work in progress, and
+      content will be added on a weekly basis. If you see an interesting project
+      that isn't shown on the page, you'll probably find it on
+      <ext-link url="https://github.com/Thewessen">my github</ext-link>.
     </ProjectBlockLayout>
   </article>
 </template>
