@@ -4,7 +4,7 @@
       class="main-title">
       <router-link to="/">
         this<span
-          :style="extendStyle">{{ extendTitle }}</span>
+          :style="style">{{ title }}</span>
       </router-link>
     </h1>
     <ul>
@@ -28,37 +28,59 @@
 </template>
 
 <script>
+const changeRoute = (route) => {
+  switch (route.name) {
+    case 'contact': {
+      return {
+        title: '.me',
+        style: {
+          color: "rgb(255, 97, 136)"
+        },
+      }
+    }
+    case 'projects': {
+      return {
+        title: '.get()',
+        style: {
+          color: "rgb(169, 220, 118)"
+        }
+      }
+    }
+    case 'date': {
+      return {
+        title: '.now()',
+        style: {
+          color: "rgb(169, 220, 118)"
+        }
+      }
+    }
+    default: {
+      return {
+        title: '.' + route.name,
+        style: {
+          color: "rgb(255, 97, 136)"
+        }
+      }
+    }
+  }
+}
 export default {
   name: "MainHeader",
   data() {
     return {
-      extendTitle: '',
-      extendStyle() {
+      title: '',
+      style() {
         return {}
       }
     }
   },
   watch: {
     $route (to) {
-      if (to.name === 'contact') {
-        this.extendTitle = '.me'
-        this.extendStyle = {
-          "color": "rgb(255, 97, 136)"
-        }
-      } else if (to.name === 'projects') {
-        this.extendTitle = '.get()'
-        this.extendStyle = {
-          color: "rgb(169, 220, 118)"
-        }
-      } else if (to.name === 'date') {
-        this.extendTitle = '.now()'
-        this.extendStyle = {
-          color: "rgb(169, 220, 118)"
-        }
-      } else {
-        this.extendTitle = ''
-      }
+      Object.assign(this, changeRoute(to))
     }
+  },
+  created() {
+    Object.assign(this, changeRoute(this.$route))
   }
 }
 </script>

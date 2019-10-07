@@ -1,8 +1,8 @@
-<template>
+<template functional>
   <ApolloQuery
     :query="require('../graphql/CTFKryptonSolution.gql')"
-    :update="computedData"
-    :variables="{ level: lvl }">
+    :update="data => data.repository.object.text"
+    :variables="{ level: `master:OverTheWire/krypton/${props.level}/solution_${props.level}`}">
     <template v-slot="{ result: { loading, error, data } }">
 
       <!-- Loading -->
@@ -18,22 +18,3 @@
     </template>
   </ApolloQuery>
 </template>
-
-<script>
-export default {
-  name: "CTFKrypton",
-  props: {
-    level: String
-  },
-  computed: {
-    lvl() {
-      return `master:OverTheWire/krypton/${this.level}/solution_${this.level}`
-    }
-  },
-  methods: {
-    computedData (data) {
-      return data.repository.object.text
-    }
-  }
-}
-</script>

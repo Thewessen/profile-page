@@ -43,7 +43,7 @@ export default {
     },
     getEntries(data) {
       return data.repository.object.entries
-        .filter(entry => entry.type === "tree")
+        .filter(entry => entry.type === 'tree')
         .map(entry => entry.name)
         .map(upperFirst)
     }

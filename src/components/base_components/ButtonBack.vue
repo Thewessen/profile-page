@@ -5,12 +5,6 @@
   </button>
 </template>
 
-<script>
-export default {
-  name: "ButtonBack"
-}
-</script>
-
 <style lang="sass" scoped>
 button
   background-color: $white

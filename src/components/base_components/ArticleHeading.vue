@@ -1,31 +1,14 @@
-<template>
+<template functional>
   <header>
     <div>
-      <h1>{{ title }}</h1>
-      <h5 v-if="subtitle">{{ subtitle }}</h5>
+      <h1>{{ props.title }}</h1>
+      <h5 v-if="props.subtitle">{{ props.subtitle }}</h5>
     </div>
-    <ext-link :url="github">
+    <ext-link :url="props.github">
       view on GitHub
     </ext-link>
   </header>
 </template>
-
-<script>
-export default {
-  name: "ArticleHeader",
-  props: {
-    title: String,
-    subtitle: {
-      type: String,
-      default: ''
-    },
-    github: {
-      type: String,
-      default: ''
-    },
-  }
-}
-</script>
 
 <style lang="sass" scoped>
 header

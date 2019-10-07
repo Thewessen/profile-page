@@ -48,35 +48,17 @@
       subtitle="Januari 2019"
       url=""
       :languages="['Linux', 'Vim', 'Tmux', 'Bash']">
-<<<<<<< HEAD
-    After a year without programming it started itching again. I decided to
-    swap carreers after this year of working as a math teacher. A proper
-    toolset is key for any developer. And now I had some time to seriously
-    work on my setup. Initially I used Vim with Tmux and Bash. Later I
-    deviated from this idea, and now using NeoVim, ZSH, with i3 as my window
-    manager.
-=======
       After a year without programming it felt the itch again. I decided to
       swap carreers after another year of teaching math. A proper toolset is
       key for any developer. And now I had some time to seriously work on my
       setup. Initially I used Vim with Tmux and Bash. Later I deviated from
       this idea, and now I'm using NeoVim, ZSH, with i3 as my window manager.
->>>>>>> master
     </ProjectBlockLayout>
     <ProjectBlockLayout
       title="Iris van der Ende"
       subtitle="Januari 2019"
       url=""
       :languages="['JavaScript', 'HTML', 'CSS']">
-<<<<<<< HEAD
-    Iris van der Ende is a great harpist and theater maker from Amsterdam. In
-    search for a new minor project to work on, I decided to remake her
-    excisting website. Making it responsive, and giving it some additional
-    features (like background image transition on scroll). Things that she
-    found hard to do using Webydoo, the hosting server and CMS at that time. I
-    decided to not use any excistent frameworks, too consolidate myself in the
-    basics of creating a website.
-=======
       Iris van der Ende is a great harpist and theatre maker from Amsterdam. In
       search for a new minor project to work on, I decided to remake her
       excisting website. To make it responsive, and give it some additional
@@ -84,26 +66,17 @@
       found hard to do using Webydoo, the hosting server and CMS at that time. I
       decided to not use any existing frameworks, too consolidate myself in the
       basics of creating a website.
->>>>>>> master
     </ProjectBlockLayout>
     <ProjectBlockLayout
       title="Capture the flag"
       subtitle="Februari 2019"
       url="/CTF/OverTheWire/Bandit"
       :languages="['Git', 'SSH', 'PHP', 'MySQL']">
-<<<<<<< HEAD
-    In my days of learning different things about computer science, I came
-    accross CTF (Capture The Flag). This is a special kind of information
-    security competitions. Special mentioning
-    <ext-link url="https://www.youtube.com/channel/UClcE-kVhqyiHCcjYwcpfj9w">
-        LiveOverflow</ext-link>'s
-=======
       While learning different things about computer science, I came
       across CTF (Capture The Flag). This is a special kind of information
       security competitions. Special mentioning
       <a href="https://www.youtube.com/channel/UClcE-kVhqyiHCcjYwcpfj9w">
         LiveOverflow</a>'s
->>>>>>> master
       YouTube channel, who has some awesome research in computer security
       and CTF writeups. Together with some beginners wargames on
       <ext-link url="https://www.overthewire.org">OverTheWire.org</ext-link>,

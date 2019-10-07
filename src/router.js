@@ -45,7 +45,7 @@ export default new Router({
     },
     {
       path: '/CTF/OverTheWire/:wargame',
-      name: 'OverTheWire',
+      name: 'overthewire',
       component: OverTheWire,
       props: true,
     },

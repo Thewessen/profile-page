@@ -22,12 +22,12 @@ export default [
   },
   {
     path: '/Exercism/KindergartenGarden',
-    name: 'kindergarten-garden',
+    name: 'kindergarten',
     component: ExercismKindergartenGarden
   },
   {
     path: '/Exercism/:language/:exercise',
-    name: 'Exercism-exercise',
+    name: 'exercism-exercise',
     // route level code-splitting
     // this generates a separate chunk (ExercismExercise.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -38,7 +38,7 @@ export default [
   },
   {
     path: '/Exercism/:language',
-    name: 'Exercism',
+    name: 'exercism',
     component: Exercism,
     props: true
   },
