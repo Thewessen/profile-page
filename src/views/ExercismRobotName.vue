@@ -91,14 +91,14 @@
           v-if="typeof solution === 'string'"
           :startLineNumbers="36">{{ getLines(solution, 36, 39) }}</CodeHighlight>
         <p>
-          Notice how we immediatly invoked the returned generator. We want
+          Notice how we immediately invoked the returned generator. We want
           <code>uniqueNames</code> to be a generator function, not a function that
           returns a generator. With this immediate invocation,
           <code>uniqueNames</code> is now a function that takes in a template and
           returns an iteratable object. Hence it's a generator function (also
           called iterator).
         </p>
-        <h3>Helpfull functions</h3>
+        <h3>Helpful functions</h3>
         <p>
           There are still some minor functions I didn't cover. Let's go through them
           really quick.

@@ -1,15 +1,13 @@
 import Vue from 'vue'
 import App from './App.vue'
 import { createProvider } from './vue-apollo'
+import { InMemoryCache } from 'apollo-cache-inmemory'
 import router from './router'
 import VueMarkdown from 'vue-markdown'
 import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
 
 Vue.config.productionTip = false
-
-// Some aditions
-import { InMemoryCache } from 'apollo-cache-inmemory'
 
 // Global component registration
 Vue.component(
