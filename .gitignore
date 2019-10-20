@@ -22,3 +22,7 @@ yarn-error.log*
 
 # Vim
 Session.vim
+
+#tags
+tags.lock
+tags.temp
