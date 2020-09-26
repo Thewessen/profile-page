@@ -6,6 +6,7 @@ import router from './router'
 import VueMarkdown from 'vue-markdown'
 import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
+import store from './store'
 
 Vue.config.productionTip = false
 
@@ -56,6 +57,8 @@ new Vue({
     cache: new InMemoryCache(),
     connectToDevTools: true
   }),
+
   router,
-  render: h => h(App),
+  store,
+  render: h => h(App)
 }).$mount('#app')
